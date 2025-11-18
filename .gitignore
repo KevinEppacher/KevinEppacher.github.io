@@ -1,4 +1,4 @@
-legacy/*
-*.html
-src/img/*
-src/src/*
+# legacy/*
+# *.html
+# src/img/*
+# src/src/*
