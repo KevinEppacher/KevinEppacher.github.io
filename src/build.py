@@ -5,23 +5,17 @@ import mistune
 configStatic = {
     "src": [
         "./mainpage.md",
-        "./teaching_experience.md",
-        "./cv.md",
         "./portfolio.md"
     ],
 
     "highlight": [
         None,
-        "./teaching.html",
-        "./cv.html",
         "./portfolio.html"
 
     ],
 
     "outfile": [
         "../index.html",
-        "../teaching.html",
-        "../cv.html",
         "../portfolio.html"
     ]
 }
@@ -55,16 +49,7 @@ configPublications = {
     ],
 
     "author": [
-        "Simon Schwaiger, Stefan Thalhammer, Wilfried Wöber, Gerald Steinbauer-Wagner",
-        "Florian Wimmer, Simon Schwaiger, Christian Fibich",
-        "Simon Schwaiger&ast;, Lucas Muster&ast;, Georg Novotny, Michael Schebek, Wilfried Wöber, Stefan Thalhammer, Christoph Böhm",
-        "Simon Schwaiger&ast;, Lucas Muster&ast;, Alessandro Scherl, Paolo Trivisonne, Wilfried Wöber, Stefan Thalhammer",
-        "Tessa Pulli, Stefan Thalhammer, Simon Schwaiger, Markus Vincze",
-        "Georg Novotny, Simon Schwaiger, Lucas Muster, Mohamed Aburaia, Wilfried Wöber",
-        "Simon Schwaiger, Mohamed Aburaia, Lucas Muster, Moritz Abdank, Wilfried Wöber",
-        "Simon Schwaiger, Mohamed Aburaia, Ali Aburaia, Wilfried Wöber",
-        "Simon Schwaiger, Ali Aburaia, Mohamed Aburaia, Wilfried Wöber",
-        "Wilfried Wöber, Johannes Rauer, Maximilian Papa, Ali Aburaia, Simon Schwaiger, Georg Novotny, Mohamed Aburaia, Wilfried Kubinger",
+
     ],
 
     "published": [
