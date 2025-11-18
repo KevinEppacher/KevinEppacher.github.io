@@ -21,5 +21,5 @@ Currently pursuing my M.Sc. in Robotics at UAS Technikum Vienna.
 ## Contact
 
 - **Email:** kevin-eppacher@hotmail.de  
-- **LinkedIn:** [linkedin.com/in/kevin-eppacher-4464591a0](https://linkedin.com/in/kevin-eppacher-4464591a0)  
+- **LinkedIn:** [linkedin.com/in/kevin-eppacher](https://linkedin.com/in/kevin-eppacher-4464591a0)  
 - **GitHub:** [github.com/KevinEppacher](https://github.com/KevinEppacher)
