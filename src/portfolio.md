@@ -1,6 +1,8 @@
 # Professional Work
 
-## 1. **Nonlinear Model Predictive Controller (nMPC) for Differential Drive Mobile Robot**
+Below is a selection of my research and engineering projects, spanning semantic exploration, optimization-based control, and applied industrial robotics.
+
+## **1. Nonlinear Model Predictive Controller (nMPC) for Differential Drive Mobile Robot**
 
 <center>
 <video width="70%" controls autoplay loop muted>
@@ -12,7 +14,7 @@
 ---
 
 ### Description
-A **nonlinear Model Predictive Controller (nMPC)** based local planner developed for a **Differential Drive Mobile Robot (DDMR)** within the **ROS Noetic** navigation stack.  
+A **nonlinear Model Predictive Controller (nMPC)** based local planner developed for a **Differential Drive Mobile Robot (DDMR)**.  
 
 Unlike conventional reactive planners, the nMPC predicts future robot states through a **kinematic model** and optimizes control inputs over a finite horizon.  
 The controller minimizes a cost function while enforcing **hard constraints** on obstacle clearance, velocity, and input bounds.
@@ -32,7 +34,8 @@ The entire system was simulated in **Gazebo** using a **TurtleBot**, with a GPU-
 ---
 
 ### Frameworks & Libraries
-- ROS Noetic  
+- ROS Noetic
+- Nav2 
 - CasADi  
 - IPOPT  
 - Python  
@@ -46,7 +49,7 @@ The entire system was simulated in **Gazebo** using a **TurtleBot**, with a GPU-
 - [Download unpublished Research Paper (PDF)](./papers/nMPC.pdf)
 ---
 
-## 2. **Automated Sensitivity Measurement System (AIRSKIN)**
+## **2. Automated Sensitivity Measurement System (AIRSKIN)**
 
 <center>
 <video width="70%" controls autoplay loop muted>
@@ -93,7 +96,7 @@ Automated robotic test bench for AIRSKIN pad calibration — measuring and visua
 
 ---
 
-## Monte Carlo Localization (Particle Filter) for Mobile Robots
+## **3. Monte Carlo Localization (Particle Filter) for Mobile Robots**
 
 <center>
 <img src="./videos/mcl.gif" width="70%" alt="Monte Carlo Localization simulation in Gazebo">
@@ -102,7 +105,7 @@ Automated robotic test bench for AIRSKIN pad calibration — measuring and visua
 ---
 
 ### Description
-A **Monte Carlo Localization (MCL)** system — also known as a **Particle Filter** — implemented for **Differential Drive Mobile Robots (DDMR)** using **ROS Noetic** and **C++**.  
+A **Monte Carlo Localization (MCL)** system — also known as a **Particle Filter** — implemented in **C++** for **Differential Drive Mobile Robots (DDMR)** using **ROS Noetic**.  
 
 The algorithm estimates a robot’s pose on a known map by maintaining a set of weighted samples (“particles”), each representing a possible state hypothesis.  
 The approach combines:
@@ -120,7 +123,8 @@ The approach combines:
 ---
 
 ### Frameworks & Libraries
-- ROS Noetic  
+- ROS Noetic
+- Nav2
 - C++  
 - Gazebo  
 - RViz  
@@ -140,42 +144,95 @@ Robust and efficient Monte Carlo Localization achieving high accuracy with minim
 
 ---
 
-Bachelor Thesis:
+## **4. Design of a cascaded position and velocity controller for a pan-tilt camera tracking UAVs (Bachelor Thesis)**
 
-The recent rapid growth in popularity of UAVs (drones) has led to a variety of new applications and opportunities. At the same time, however, serious safety concerns and potential hazards have emerged, affecting both airports and individuals.
+<center>
+<video width="70%" controls autoplay loop muted>
+  <source src="./videos/OptoFence_Video_3.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+</center>
 
-My bachelor thesis aims to address this issue. At the Automation and Control Institute (TU), I was privileged to develop a control system for tracking drones at short distances and high speeds using a pan-tilt (PT) camera. 
+---
 
-I developed a cascaded position and velocity controller to control the pan and tilt axis, which are driven by a permanent magnet synchronous motor (PMSM) with a field oriented control (FOC) algorithm. In addition, the drone's trajectory is smoothed, interpolated, and predicted using the Kalman filter (sensor fusion) in case the drone disappears from the field of view or becomes undetectable. The methods were simulated in the Robot Operating System (ROS) and using OpenCV.
+### Description
+This project presents a **control system for tracking UAVs at high speeds and short distances** using a **pan–tilt (PT) camera**.  
+Developed at the **Automation and Control Institute (TU Wien)**, the system addresses safety-critical scenarios by accurately tracking drone motion in real time.
 
-In a reproducible experiment, a laser beam with a defined trajectory was specified for the PT camera to track. During the tracking, the laser point detection algorithm is briefly disabled to further estimate the motion of the respective axes.
+The setup employs a **cascaded position and velocity controller** for the pan and tilt axes, each driven by a **Permanent Magnet Synchronous Motor (PMSM)** under **Field-Oriented Control (FOC)**.  
+A **Kalman Filter–based sensor fusion** module smooths and predicts drone trajectories, ensuring continuous tracking even during temporary loss of visual contact.
 
-The results showed that by using the cascaded position and velocity controller, 1 rad/s can be achieved and therefore the drones can track at a distance of 30 m with a velocity of 30 m/s.
+The full system was modeled and simulated in **Matlab/Simulink**, **OpenCV** and **ROS**, with experiments using a **laser trajectory** as a reproducible target to validate controller performance.
 
-Hashtag#UAV Hashtag#DroneTechnology Hashtag#ControlSystems Hashtag#Automation Hashtag#Research Hashtag#Thesis Hashtag#Innovation
+---
 
-Paths:
-videos/OptoFence_Video_3.mp4
+### Key Highlights
+- Achieved **1 rad/s** rotational speed, enabling tracking of drones up to **30 m distance** at **30 m/s** velocity.  
+- Implemented **cascaded position–velocity control** for precise motor actuation.  
+- Used **Kalman filtering** to interpolate missing detections and maintain smooth motion estimation.  
 
-## 
+---
 
+### Frameworks & Libraries
+- ROS (Robot Operating System)  
+- OpenCV  
+- C++  
+- Python  
+- Matlab/Simulink
+- OpenCV Kalman Filter (Sensor Fusion)  
 
+---
 
+### Summary
+Developed a cascaded position–velocity control system with real-time sensor fusion for UAV tracking using a pan–tilt camera — achieving high-speed precision control and robust prediction even under visual occlusions.
 
 # Personal Projects
 
+## **1. 6-DOF Robotic Arm – Design, Simulation, and Control**
+
+<center>
+<video width="70%" controls autoplay loop muted>
+  <source src="./videos/6dofra.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+</center>
+
+<center>
+<img src="./img/6_DOFRA_Rendered_1.png" width="45%" style="margin:10px;">
+<img src="./img/6_DOFRA_Rendered_2.png" width="45%" style="margin:10px;">
+</center>
+
 ---
-In this project, a 6-DOF robotic arm has been designed and built which is driven by stepper motors and various gears such as 3D printed harmonic drives and timing belts. 
 
-The robot arm is controlled via ROS (Robot Operating System) using the MoveIt package. The MoveIt package visualizes and controls the robot arm on RViz, and in the background, it calculates the collision matrix so that the robot arm cannot collide with itself. 
+### Description
+A fully designed and built **6-DOF robotic arm**, actuated by **stepper motors** and mechanical components such as **3D-printed harmonic drives** and **timing belts**.  
 
- Through the visualization of RViz, the robot arm is simulated in the program and this simulation is transferred to the real robot .🦾
+The robot is controlled using the **Robot Operating System (ROS)** with the **MoveIt** motion planning framework.  
+MoveIt provides both **motion planning** and **collision avoidance**, ensuring that the arm operates safely in simulation and the physical world.
 
-Next step is, to make it 👀
+The project demonstrates the full workflow from **mechanical design**, **simulation**, and **ROS integration** to **hardware control**.  
+Through **RViz visualization**, planned trajectories are simulated before execution, and these are then transferred seamlessly to the real robot arm.
 
- Hashtag#Robot Hashtag#ROS Hashtag#3Dprinted Hashtag#PickAndPlace Hashtag#stepper Hashtag#MoveIt Hashtag#gripper Hashtag#innovation Hashtag#fromscr
+---
 
- Paths:
- img/6_DOFRA_Rendered_1.png
- img/6_DOFRA_Rendered_2.png
- videos/6dofra.mp4
+### Key Highlights
+- **Custom-built 6-DOF robotic arm** driven by stepper motors  
+- **3D-printed harmonic drives** and timing belt mechanisms for high precision  
+- **MoveIt + RViz** integration for planning, visualization, and collision avoidance  
+- **ROS-based control pipeline** for synchronized real-world execution  
+- Modular architecture designed for future **vision-based pick-and-place** integration  
+
+---
+
+### Frameworks & Tools
+- ROS  
+- MoveIt  
+- RViz  
+- Python / C++  
+- 3D Printing (Fusion 360 / PLA)  
+- Stepper Motor Control (DRV8825 Drivers)  
+
+---
+
+### Summary
+A 6-DOF robotic arm designed and controlled entirely through open-source tools — combining 3D-printed mechanics, ROS MoveIt motion planning, and real-to-sim synchronization for flexible robotic manipulation.
