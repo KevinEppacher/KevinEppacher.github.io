@@ -86,6 +86,7 @@ and is wrapped around the whole page content, except for the footer in this exam
     
     <!-- START GENERATED HTML HERE --><h1>Professional Work</h1>
 <p>Below is a selection of my research and engineering projects, spanning semantic exploration, optimization-based control, and applied industrial robotics.</p>
+<hr />
 <h2><strong>1. Nonlinear Model Predictive Controller (nMPC) for Differential Drive Mobile Robot</strong></h2>
 <center>
 <video width="70%" controls autoplay loop muted>
@@ -93,6 +94,7 @@ and is wrapped around the whole page content, except for the footer in this exam
   Your browser does not support the video tag.
 </video>
 </center>
+
 <hr />
 <h3>Description</h3>
 <p>A <strong>nonlinear Model Predictive Controller (nMPC)</strong> based local planner developed for a <strong>Differential Drive Mobile Robot (DDMR)</strong>.</p>
@@ -113,15 +115,13 @@ The controller minimizes a cost function while enforcing <strong>hard constraint
 The entire system was simulated in <strong>Gazebo</strong> using a <strong>TurtleBot</strong>, with a GPU-enabled <strong>Docker</strong> container for reproducibility.</p>
 <hr />
 <h3>Frameworks &amp; Libraries</h3>
-<ul>
-<li>ROS Noetic</li>
-<li>Nav2</li>
-<li>CasADi</li>
-<li>IPOPT</li>
-<li>Python</li>
-<li>Gazebo</li>
-<li>Docker</li>
-</ul>
+<p><img src="https://img.shields.io/badge/ROS-Noetic-blue?logo=ros" alt="ROS Noetic" /><br />
+<img src="https://img.shields.io/badge/Nav2-Navigation-brightgreen?logo=ros" alt="Nav2" /><br />
+<img src="https://img.shields.io/badge/CasADi-Optimization-orange" alt="CasADi" /><br />
+<img src="https://img.shields.io/badge/IPOPT-Solver-lightgrey" alt="IPOPT" /><br />
+<img src="https://img.shields.io/badge/Python-3.10-yellow?logo=python" alt="Python" /><br />
+<img src="https://img.shields.io/badge/Gazebo-Simulation-blueviolet?logo=ros" alt="Gazebo" /><br />
+<img src="https://img.shields.io/badge/Docker-Containerization-blue?logo=docker" alt="Docker" /></p>
 <hr />
 <h3>Links</h3>
 <ul>
@@ -136,6 +136,7 @@ The entire system was simulated in <strong>Gazebo</strong> using a <strong>Turtl
   Your browser does not support the video tag.
 </video>
 </center>
+
 <hr />
 <h3>Description</h3>
 <p>A <strong>collaborative project with <a href="https://www.airskin.io/">Blue Danube Robotics – AIRSKIN</a></strong> developed at <strong>UAS Technikum Vienna</strong> to automate tactile pad sensitivity measurements.</p>
@@ -144,20 +145,18 @@ The entire system was simulated in <strong>Gazebo</strong> using a <strong>Turtl
 <ul>
 <li>A <strong>UR10</strong> industrial robot</li>
 <li>A <strong>force–torque (FT) sensor</strong> connected via the UR ROS bridge (TCP/IP)</li>
-<li>A <strong>custom ImGui C++ HMI</strong> for switching between <em>Freedrive Mode</em> (teaching) and <em>External Control Mode</em> (automated measurement)</li>
+<li>A <strong>custom ImGui C++ HMI</strong> for switching between <em>Freedrive Mode</em> and <em>External Control Mode</em></li>
 </ul>
-<p>Once all measurement points are defined, <strong>MoveIt</strong> executes a fully automated sequence. The system visualizes force vectors in <strong>RViz</strong> and overlays a 3D point cloud from an integrated RGB-D camera, enabling intuitive analysis of pad deformation and sensitivity.</p>
-<p>A full <strong>Gazebo simulation</strong> replicates the entire setup for safe testing and repeatable experiments.</p>
+<p>Once all measurement points are defined, <strong>MoveIt</strong> executes a fully automated sequence. The system visualizes force vectors in <strong>RViz</strong> and overlays a 3D point cloud from an integrated RGB-D camera.</p>
 <hr />
 <h3>Frameworks &amp; Libraries</h3>
-<ul>
-<li>ROS Noetic</li>
-<li>MoveIt</li>
-<li>ImGui (C++ GUI)</li>
-<li>RViz / Gazebo</li>
-<li>Docker</li>
-<li>UR ROS Driver / TCP-IP Bridge</li>
-</ul>
+<p><img src="https://img.shields.io/badge/ROS-Noetic-blue?logo=ros" alt="ROS Noetic" /><br />
+<img src="https://img.shields.io/badge/MoveIt-Motion%20Planning-purple?logo=ros" alt="MoveIt" /><br />
+<img src="https://img.shields.io/badge/ImGui-C%2B%2B%20GUI-lightgrey" alt="ImGui" /><br />
+<img src="https://img.shields.io/badge/RViz-Visualization-orange?logo=ros" alt="RViz" /><br />
+<img src="https://img.shields.io/badge/Gazebo-Simulation-blueviolet?logo=ros" alt="Gazebo" /><br />
+<img src="https://img.shields.io/badge/Docker-Containerization-blue?logo=docker" alt="Docker" /><br />
+<img src="https://img.shields.io/badge/UR--ROS--Driver-UR10%20Control-darkblue" alt="UR ROS Driver" /></p>
 <hr />
 <h3>Links</h3>
 <ul>
@@ -171,34 +170,26 @@ The entire system was simulated in <strong>Gazebo</strong> using a <strong>Turtl
 <center>
 <img src="./videos/mcl.gif" width="70%" alt="Monte Carlo Localization simulation in Gazebo">
 </center>
+
 <hr />
 <h3>Description</h3>
-<p>A <strong>Monte Carlo Localization (MCL)</strong> system — also known as a <strong>Particle Filter</strong> — implemented in <strong>C++</strong> for <strong>Differential Drive Mobile Robots (DDMR)</strong> using <strong>ROS Noetic</strong>.</p>
-<p>The algorithm estimates a robot’s pose on a known map by maintaining a set of weighted samples (“particles”), each representing a possible state hypothesis.<br />
-The approach combines:</p>
-<ul>
-<li>A <strong>motion model</strong> for prediction (based on wheel odometry)</li>
-<li>A <strong>sensor model</strong> using <strong>raycasting</strong> for probabilistic measurement updates</li>
-<li>A <strong>resampling step</strong> to reinforce high-likelihood particles and discard low-likelihood ones</li>
-</ul>
+<p>A <strong>Monte Carlo Localization (MCL)</strong> system — also known as a <strong>Particle Filter</strong> — implemented in <strong>C++</strong> for <strong>Differential Drive Mobile Robots</strong> using <strong>ROS Noetic</strong>.</p>
+<p>The algorithm estimates a robot’s pose on a known map by maintaining a set of weighted samples (“particles”), each representing a possible state hypothesis.</p>
 <hr />
 <h3>Key Highlights</h3>
 <ul>
-<li><strong>Efficient Particle Usage:</strong> Achieved reliable localization with only <strong>100 particles</strong>, compared to typical <strong>500–3000</strong> used by <strong>AMCL</strong>, while maintaining accuracy in a small apartment map.</li>
-<li><strong>Innovative Resampling Strategy:</strong> Introduced controlled randomness by regenerating <strong>80% of the particles</strong> each iteration, improving robustness against localization loss and aiding fast global convergence.</li>
-<li><strong>Gazebo Simulation:</strong> Implemented and validated using a <strong>TurtleBot</strong> navigating through a custom indoor apartment environment.</li>
+<li>Reliable localization with only <strong>100 particles</strong>, compared to typical <strong>500–3000 AMCL</strong> particles.</li>
+<li><strong>80% randomized resampling</strong> per iteration for fast recovery from localization loss.</li>
+<li><strong>Gazebo simulation</strong> using a TurtleBot in an apartment environment.</li>
 </ul>
 <hr />
 <h3>Frameworks &amp; Libraries</h3>
-<ul>
-<li>ROS Noetic</li>
-<li>Nav2</li>
-<li>C++</li>
-<li>Gazebo</li>
-<li>RViz</li>
-<li>Eigen</li>
-<li>Docker</li>
-</ul>
+<p><img src="https://img.shields.io/badge/ROS-Noetic-blue?logo=ros" alt="ROS Noetic" /><br />
+<img src="https://img.shields.io/badge/C%2B%2B-17-blue?logo=c%2B%2B" alt="C++" /><br />
+<img src="https://img.shields.io/badge/Eigen-Math%20Library-lightgrey" alt="Eigen" /><br />
+<img src="https://img.shields.io/badge/Gazebo-Simulation-blueviolet?logo=ros" alt="Gazebo" /><br />
+<img src="https://img.shields.io/badge/RViz-Visualization-orange?logo=ros" alt="RViz" /><br />
+<img src="https://img.shields.io/badge/Docker-Containerization-blue?logo=docker" alt="Docker" /></p>
 <hr />
 <h3>Links</h3>
 <ul>
@@ -209,7 +200,7 @@ The approach combines:</p>
 <h3>Summary</h3>
 <p>Robust and efficient Monte Carlo Localization achieving high accuracy with minimal particles through adaptive resampling — enabling fast and reliable robot pose estimation in dynamic indoor environments.</p>
 <hr />
-<h2><strong>4. Design of a cascaded position and velocity controller for a pan-tilt camera tracking UAVs (Bachelor Thesis)</strong></h2>
+<h2><strong>4. Design of a Cascaded Position and Velocity Controller for a Pan–Tilt Camera Tracking UAVs (Bachelor Thesis)</strong></h2>
 <center>
 <video width="70%" controls autoplay loop muted>
   <source src="./videos/OptoFence_Video_3.mp4" type="video/mp4">
@@ -219,33 +210,21 @@ The approach combines:</p>
 
 <hr />
 <h3>Description</h3>
-<p>This project presents a <strong>control system for tracking UAVs at high speeds and short distances</strong> using a <strong>pan–tilt (PT) camera</strong>.<br />
-Developed at the <strong>Automation and Control Institute (TU Wien)</strong>, the system addresses safety-critical scenarios by accurately tracking drone motion in real time.</p>
-<p>The setup employs a <strong>cascaded position and velocity controller</strong> for the pan and tilt axes, each driven by a <strong>Permanent Magnet Synchronous Motor (PMSM)</strong> under <strong>Field-Oriented Control (FOC)</strong>.<br />
-A <strong>Kalman Filter–based sensor fusion</strong> module smooths and predicts drone trajectories, ensuring continuous tracking even during temporary loss of visual contact.</p>
-<p>The full system was modeled and simulated in <strong>Matlab/Simulink</strong>, <strong>OpenCV</strong> and <strong>ROS</strong>, with experiments using a <strong>laser trajectory</strong> as a reproducible target to validate controller performance.</p>
-<hr />
-<h3>Key Highlights</h3>
-<ul>
-<li>Achieved <strong>1 rad/s</strong> rotational speed, enabling tracking of drones up to <strong>30 m distance</strong> at <strong>30 m/s</strong> velocity.</li>
-<li>Implemented <strong>cascaded position–velocity control</strong> for precise motor actuation.</li>
-<li>Used <strong>Kalman filtering</strong> to interpolate missing detections and maintain smooth motion estimation.</li>
-</ul>
+<p>A <strong>control system for tracking UAVs</strong> using a <strong>pan–tilt camera</strong> with cascaded position and velocity control.<br />
+Developed at <strong>Automation and Control Institute (TU Wien)</strong>, the system enables accurate drone tracking in real time with predictive correction via <strong>Kalman filtering</strong>.</p>
 <hr />
 <h3>Frameworks &amp; Libraries</h3>
-<ul>
-<li>ROS (Robot Operating System)</li>
-<li>OpenCV</li>
-<li>C++</li>
-<li>Python</li>
-<li>Matlab/Simulink</li>
-<li>OpenCV Kalman Filter (Sensor Fusion)</li>
-</ul>
+<p><img src="https://img.shields.io/badge/ROS-Control-blue?logo=ros" alt="ROS" /><br />
+<img src="https://img.shields.io/badge/OpenCV-Computer%20Vision-green?logo=opencv" alt="OpenCV" /><br />
+<img src="https://img.shields.io/badge/C%2B%2B-17-blue?logo=c%2B%2B" alt="C++" /><br />
+<img src="https://img.shields.io/badge/Python-3.10-yellow?logo=python" alt="Python" /><br />
+<img src="https://img.shields.io/badge/Matlab%2FSimulink-Control-orange?logo=mathworks" alt="Matlab" /></p>
 <hr />
 <h3>Summary</h3>
 <p>Developed a cascaded position–velocity control system with real-time sensor fusion for UAV tracking using a pan–tilt camera — achieving high-speed precision control and robust prediction even under visual occlusions.</p>
+<hr />
 <h1>Personal Projects</h1>
-<h2><strong>1. 6-DOF Robotic Arm – Design, Simulation, and Control</strong></h2>
+<h2><strong>1. 6-DOF Robotic Arm – Design, Simulation &amp; Control</strong></h2>
 <center>
 <video width="70%" controls autoplay loop muted>
   <source src="./videos/6dofra.mp4" type="video/mp4">
@@ -259,31 +238,14 @@ A <strong>Kalman Filter–based sensor fusion</strong> module smooths and predic
 </center>
 
 <hr />
-<h3>Description</h3>
-<p>A fully designed and built <strong>6-DOF robotic arm</strong>, actuated by <strong>stepper motors</strong> and mechanical components such as <strong>3D-printed harmonic drives</strong> and <strong>timing belts</strong>.</p>
-<p>The robot is controlled using the <strong>Robot Operating System (ROS)</strong> with the <strong>MoveIt</strong> motion planning framework.<br />
-MoveIt provides both <strong>motion planning</strong> and <strong>collision avoidance</strong>, ensuring that the arm operates safely in simulation and the physical world.</p>
-<p>The project demonstrates the full workflow from <strong>mechanical design</strong>, <strong>simulation</strong>, and <strong>ROS integration</strong> to <strong>hardware control</strong>.<br />
-Through <strong>RViz visualization</strong>, planned trajectories are simulated before execution, and these are then transferred seamlessly to the real robot arm.</p>
-<hr />
-<h3>Key Highlights</h3>
-<ul>
-<li><strong>Custom-built 6-DOF robotic arm</strong> driven by stepper motors</li>
-<li><strong>3D-printed harmonic drives</strong> and timing belt mechanisms for high precision</li>
-<li><strong>MoveIt + RViz</strong> integration for planning, visualization, and collision avoidance</li>
-<li><strong>ROS-based control pipeline</strong> for synchronized real-world execution</li>
-<li>Modular architecture designed for future <strong>vision-based pick-and-place</strong> integration</li>
-</ul>
-<hr />
 <h3>Frameworks &amp; Tools</h3>
-<ul>
-<li>ROS</li>
-<li>MoveIt</li>
-<li>RViz</li>
-<li>Python / C++</li>
-<li>3D Printing (Fusion 360 / PLA)</li>
-<li>Stepper Motor Control (DRV8825 Drivers)</li>
-</ul>
+<p><img src="https://img.shields.io/badge/ROS-Integration-blue?logo=ros" alt="ROS" /><br />
+<img src="https://img.shields.io/badge/MoveIt-Motion%20Planning-purple?logo=ros" alt="MoveIt" /><br />
+<img src="https://img.shields.io/badge/RViz-Visualization-orange?logo=ros" alt="RViz" /><br />
+<img src="https://img.shields.io/badge/Python-3.10-yellow?logo=python" alt="Python" /><br />
+<img src="https://img.shields.io/badge/C%2B%2B-17-blue?logo=c%2B%2B" alt="C++" /><br />
+<img src="https://img.shields.io/badge/SolidWorks-Mechanical%20Design-red" alt="SolidWorks" /><br />
+<img src="https://img.shields.io/badge/3D%20Printing-Prototyping-darkgreen" alt="3D Printing" /></p>
 <hr />
 <h3>Summary</h3>
 <p>A 6-DOF robotic arm designed and controlled entirely through open-source tools — combining 3D-printed mechanics, ROS MoveIt motion planning, and real-to-sim synchronization for flexible robotic manipulation.</p>
