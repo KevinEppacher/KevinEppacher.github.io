@@ -112,8 +112,9 @@ The project is currently under **active development**, with further experiments 
 ---
 
 ### Links  
-- [Download Master Thesis (PDF)](./papers/SAGE.pdf)
+- [GitHub Repository](https://github.com/KevinEppacher/SAGE.git)
 
+https://github.com/KevinEppacher/SAGE.git
 ---
 
 ### Summary  
