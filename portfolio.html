@@ -85,6 +85,101 @@ and is wrapped around the whole page content, except for the footer in this exam
   <div class="w3-card-4 w3-margin w3-white" style="padding: 15pt;">
     
     <!-- START GENERATED HTML HERE --><h1>Professional Work</h1>
+<h2>Nonlinear Model Predictive Controller (nMPC) for Differential Drive Mobile Robot</h2>
+<center>
+<video width="70%" controls autoplay loop muted>
+  <source src="./videos/nMPC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+</center>
+
+<hr />
+<h3>Description</h3>
+<p>A <strong>nonlinear Model Predictive Controller (nMPC)</strong> based local planner developed for a <strong>Differential Drive Mobile Robot (DDMR)</strong> within the <strong>ROS Noetic</strong> navigation stack.</p>
+<p>Unlike conventional reactive planners, the nMPC predicts future robot states through a <strong>kinematic model</strong> and optimizes control inputs over a finite horizon.<br />
+The controller minimizes a cost function while enforcing <strong>hard constraints</strong> on obstacle clearance, velocity, and input bounds.</p>
+<p>The implementation leverages:</p>
+<ul>
+<li><strong>CasADi</strong> for nonlinear optimization formulation</li>
+<li><strong>IPOPT</strong> (Interior Point Optimizer) for efficient real-time solving</li>
+<li><strong>Python / ROS Noetic</strong> for seamless runtime integration</li>
+</ul>
+<p>The planner was benchmarked against standard local planners:</p>
+<ul>
+<li><strong>Dynamic Window Approach (DWA)</strong></li>
+<li><strong>Timed Elastic Band (TEB)</strong></li>
+</ul>
+<p>Results demonstrate smoother, dynamically feasible trajectories, particularly in cluttered or narrow environments.<br />
+The entire system was simulated in <strong>Gazebo</strong> using a <strong>TurtleBot</strong>, with a GPU-enabled <strong>Docker</strong> container for reproducibility.</p>
+<hr />
+<h3>Frameworks &amp; Libraries</h3>
+<ul>
+<li>ROS Noetic</li>
+<li>CasADi</li>
+<li>IPOPT</li>
+<li>Python</li>
+<li>Gazebo</li>
+<li>Docker</li>
+</ul>
+<hr />
+<h3>Links</h3>
+<ul>
+<li><a href="https://github.com/KevinEppacher/walle_ws.git">GitHub Repository</a></li>
+<li><a href="./papers/nMPC.pdf">Download unpublished Research Paper (PDF)</a></li>
+</ul>
+<hr />
+<h2>Automated Sensitivity Measurement System (AIRSKIN)</h2>
+<center>
+<video width="70%" controls autoplay loop muted>
+  <source src="./videos/sensibility_measurements.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+</center>
+
+<hr />
+<h3>Description</h3>
+<p>A <strong>collaborative project with <a href="https://www.airskin.io/">Blue Danube Robotics – AIRSKIN</a></strong> developed at <strong>UAS Technikum Vienna</strong> to automate tactile pad sensitivity measurements.</p>
+<p>The system measures the <strong>force and displacement</strong> required to trigger an AIRSKIN pad at defined grid points. From this, the <strong>spring constant</strong> and <strong>local sensitivity</strong> are derived to detect mechanical weak points and support further product development.</p>
+<p>Built entirely with <strong>ROS Noetic</strong> and <strong>Docker</strong>, the system integrates:</p>
+<ul>
+<li>A <strong>UR10</strong> industrial robot</li>
+<li>A <strong>force–torque (FT) sensor</strong> connected via the UR ROS bridge (TCP/IP)</li>
+<li>A <strong>custom ImGui C++ HMI</strong> for switching between <em>Freedrive Mode</em> (teaching) and <em>External Control Mode</em> (automated measurement)</li>
+</ul>
+<p>Once all measurement points are defined, <strong>MoveIt</strong> executes a fully automated sequence. The system visualizes force vectors in <strong>RViz</strong> and overlays a 3D point cloud from an integrated RGB-D camera, enabling intuitive analysis of pad deformation and sensitivity.</p>
+<p>A full <strong>Gazebo simulation</strong> replicates the entire setup for safe testing and repeatable experiments.</p>
+<hr />
+<h3>Frameworks &amp; Libraries</h3>
+<ul>
+<li>ROS Noetic</li>
+<li>MoveIt</li>
+<li>ImGui (C++ GUI)</li>
+<li>RViz / Gazebo</li>
+<li>Docker</li>
+<li>UR ROS Driver / TCP-IP Bridge</li>
+</ul>
+<hr />
+<h3>Links</h3>
+<ul>
+<li><a href="https://github.com/KevinEppacher/goldilocks_sensibility_ws.git">GitHub Repository</a></li>
+</ul>
+<hr />
+<h3>Summary</h3>
+<p>Automated robotic test bench for AIRSKIN pad calibration — measuring and visualizing tactile sensitivity through force–displacement mapping.</p>
+<hr />
+<p>🚀 Monte Carlo Localization (Particle Filter) for Mobile Robots 🤖🌟
+Last year, during my second master's semester, I had the opportunity to work on a project where I implemented a Monte Carlo Localization (MCL) algorithm, also known as a particle filter, for the localization of Differential Drive Mobile Robots (DDMR).</p>
+<p>The core idea behind the particle filter is simple yet powerful: It utilizes a predefined map, a motion model for prediction, and weights each particle based on raycasting within a probabilistic measurement model. I developed a ROS Noetic C++ implementation, simulating a Turtlebot navigating through a small apartment environment within Gazebo.</p>
+<p>Key Highlights of My Approach:</p>
+<ul>
+<li>Efficient Particle Usage: Achieving reliable localization with only 100 particles, compared to the typical 500 to 3000 particles used by ROS Adaptive Monte Carlo Localization (AMCL) for a small apartment environment.</li>
+<li>Innovative Resampling Strategy: Introducing randomness by generating 80% of the particles every time. This approach greatly improves the algorithm’s ability to quickly determine the initial pose and recover from localization loss.</li>
+</ul>
+<p>Check out the full details and code here: https://lnkd.in/dE9Z88Zq</p>
+<p>I'd love to hear your thoughts and feedback! 🚀🤖
+Hashtag#Robotics Hashtag#Localization Hashtag#MonteCarlo Hashtag#AMCL Hashtag#MachineLearning Hashtag#ROS Hashtag#C++ Hashtag#Gazebo Hashtag#Simulation</p>
+<p>Paths:
+videos/mcl.gif</p>
 <hr />
 <p>Bachelor Thesis:</p>
 <p>The recent rapid growth in popularity of UAVs (drones) has led to a variety of new applications and opportunities. At the same time, however, serious safety concerns and potential hazards have emerged, affecting both airports and individuals.</p>
@@ -103,9 +198,9 @@ videos/OptoFence_Video_3.mp4</p>
 <p>Next step is, to make it 👀</p>
 <p>Hashtag#Robot Hashtag#ROS Hashtag#3Dprinted Hashtag#PickAndPlace Hashtag#stepper Hashtag#MoveIt Hashtag#gripper Hashtag#innovation Hashtag#fromscr</p>
 <p>Paths:
- img/6_DOFRA_Rendered_1.png
- img/6_DOFRA_Rendered_2.png
- videos/6dofra.mp4</p>
+img/6_DOFRA_Rendered_1.png
+img/6_DOFRA_Rendered_2.png
+videos/6dofra.mp4</p>
 <!-- END GENERATED HTML HERE -->
 
   </div>
