@@ -1,6 +1,6 @@
 # Professional Work
 
-## Nonlinear Model Predictive Controller (nMPC) for Differential Drive Mobile Robot
+## 1. **Nonlinear Model Predictive Controller (nMPC) for Differential Drive Mobile Robot**
 
 <center>
 <video width="70%" controls autoplay loop muted>
@@ -46,7 +46,7 @@ The entire system was simulated in **Gazebo** using a **TurtleBot**, with a GPU-
 - [Download unpublished Research Paper (PDF)](./papers/nMPC.pdf)
 ---
 
-## Automated Sensitivity Measurement System (AIRSKIN)
+## 2. **Automated Sensitivity Measurement System (AIRSKIN)**
 
 <center>
 <video width="70%" controls autoplay loop muted>
@@ -91,25 +91,52 @@ A full **Gazebo simulation** replicates the entire setup for safe testing and re
 ### Summary
 Automated robotic test bench for AIRSKIN pad calibration — measuring and visualizing tactile sensitivity through force–displacement mapping.
 
+---
+
+## Monte Carlo Localization (Particle Filter) for Mobile Robots
+
+<center>
+<img src="./videos/mcl.gif" width="70%" alt="Monte Carlo Localization simulation in Gazebo">
+</center>
 
 ---
 
-🚀 Monte Carlo Localization (Particle Filter) for Mobile Robots 🤖🌟
-Last year, during my second master's semester, I had the opportunity to work on a project where I implemented a Monte Carlo Localization (MCL) algorithm, also known as a particle filter, for the localization of Differential Drive Mobile Robots (DDMR).
+### Description
+A **Monte Carlo Localization (MCL)** system — also known as a **Particle Filter** — implemented for **Differential Drive Mobile Robots (DDMR)** using **ROS Noetic** and **C++**.  
 
-The core idea behind the particle filter is simple yet powerful: It utilizes a predefined map, a motion model for prediction, and weights each particle based on raycasting within a probabilistic measurement model. I developed a ROS Noetic C++ implementation, simulating a Turtlebot navigating through a small apartment environment within Gazebo.
+The algorithm estimates a robot’s pose on a known map by maintaining a set of weighted samples (“particles”), each representing a possible state hypothesis.  
+The approach combines:
+- A **motion model** for prediction (based on wheel odometry)  
+- A **sensor model** using **raycasting** for probabilistic measurement updates  
+- A **resampling step** to reinforce high-likelihood particles and discard low-likelihood ones  
 
-Key Highlights of My Approach:
-- Efficient Particle Usage: Achieving reliable localization with only 100 particles, compared to the typical 500 to 3000 particles used by ROS Adaptive Monte Carlo Localization (AMCL) for a small apartment environment.
-- Innovative Resampling Strategy: Introducing randomness by generating 80% of the particles every time. This approach greatly improves the algorithm’s ability to quickly determine the initial pose and recover from localization loss.
+---
 
-Check out the full details and code here: https://lnkd.in/dE9Z88Zq
+### Key Highlights
+- **Efficient Particle Usage:** Achieved reliable localization with only **100 particles**, compared to typical **500–3000** used by **AMCL**, while maintaining accuracy in a small apartment map.  
+- **Innovative Resampling Strategy:** Introduced controlled randomness by regenerating **80% of the particles** each iteration, improving robustness against localization loss and aiding fast global convergence.  
+- **Gazebo Simulation:** Implemented and validated using a **TurtleBot** navigating through a custom indoor apartment environment.  
 
-I'd love to hear your thoughts and feedback! 🚀🤖
-Hashtag#Robotics Hashtag#Localization Hashtag#MonteCarlo Hashtag#AMCL Hashtag#MachineLearning Hashtag#ROS Hashtag#C++ Hashtag#Gazebo Hashtag#Simulation
+---
 
-Paths:
-videos/mcl.gif
+### Frameworks & Libraries
+- ROS Noetic  
+- C++  
+- Gazebo  
+- RViz  
+- Eigen  
+- Docker  
+
+---
+
+### Links
+- [GitHub Repository](https://github.com/KevinEppacher/Probabilistic_Lab.git)
+- [Download Research Paper (PDF)](./papers/efficient_monte_carlo_localization_for_mobile_robots_implementation_and_evaluation_Eppacher.pdf)
+
+---
+
+### Summary
+Robust and efficient Monte Carlo Localization achieving high accuracy with minimal particles through adaptive resampling — enabling fast and reliable robot pose estimation in dynamic indoor environments.
 
 ---
 
@@ -129,6 +156,10 @@ Hashtag#UAV Hashtag#DroneTechnology Hashtag#ControlSystems Hashtag#Automation Ha
 
 Paths:
 videos/OptoFence_Video_3.mp4
+
+## 
+
+
 
 
 # Personal Projects
