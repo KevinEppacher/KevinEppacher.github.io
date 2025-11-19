@@ -64,6 +64,8 @@ It bridges **educational usability** and **research-grade scalability**, empower
 
 ---
 
+---
+
 ## **2. Nonlinear Model Predictive Controller (nMPC) for Differential Drive Mobile Robot**
 
 <center>
@@ -75,7 +77,7 @@ It bridges **educational usability** and **research-grade scalability**, empower
 
 ---
 
-### Description
+### Description  
 A **nonlinear Model Predictive Controller (nMPC)** based local planner developed for a **Differential Drive Mobile Robot (DDMR)**.  
 
 Unlike conventional reactive planners, the nMPC predicts future robot states through a **kinematic model** and optimizes control inputs over a finite horizon.  
@@ -93,6 +95,8 @@ The planner was benchmarked against standard local planners:
 Results demonstrate smoother, dynamically feasible trajectories, particularly in cluttered or narrow environments.  
 The entire system was simulated in **Gazebo** using a **TurtleBot**, with a GPU-enabled **Docker** container for reproducibility.
 
+> *See also the [Optimization Lab – PyTorch-based MPC (ROS 2)](#3-optimization-lab-pytorch-based-mpc-for-robotics) for a lightweight educational re-implementation using PyTorch instead of CasADi.*
+
 ---
 
 ### Frameworks & Libraries  
@@ -106,13 +110,70 @@ The entire system was simulated in **Gazebo** using a **TurtleBot**, with a GPU-
 
 ---
 
-### Links
-- [GitHub Repository](https://github.com/KevinEppacher/walle_ws.git)
+### Links  
+- [GitHub Repository](https://github.com/KevinEppacher/walle_ws.git)  
 - [Download unpublished Research Paper (PDF)](./papers/nMPC.pdf)
 
 ---
 
-## **3. Automated Sensitivity Measurement System (AIRSKIN)**
+### Summary  
+A high-performance nonlinear MPC for mobile robots using CasADi and IPOPT — delivering smooth, constraint-aware motion planning and serving as a foundation for subsequent PyTorch-based re-implementations in ROS 2.
+
+---
+
+## **3. Optimization Lab – PyTorch-Based MPC for Robotics**
+
+<center>
+<img src="./videos/mpc_demo_1.gif" width="70%">
+</center>
+
+---
+
+### Description  
+A **PyTorch-based Model Predictive Control (MPC)** framework developed as part of a **university optimization lab**, demonstrating how numerical optimization can be applied to control and planning problems in robotics.  
+Unlike the earlier CasADi-based MPC, this version leverages **PyTorch autograd and optimizers (Adam/LBFGS)** directly — without relying on external NLP solvers — to teach students how to *formulate and solve control problems from first principles*.
+
+Developed as a **commissioned project**, the lab provides a complete **ROS 2 Jazzy package (`mpc_local_planner`)** that serves as both a tutorial and a working local planner.  
+It includes comprehensive documentation explaining:
+- optimization in localization, planning, and control,  
+- MPC cost shaping and constraints,  
+- and real-time optimization loops using PyTorch tensors.
+
+---
+
+### Key Highlights  
+- Created an **Optimization Lab** for the *UAS Technikum Vienna* robotics curriculum  
+- Developed a **didactic ROS 2 Jazzy package**: `mpc_local_planner`  
+- Implemented **nMPC with PyTorch optimizers** (Adam, LBFGS, RMSProp)  
+- Demonstrated **gradient-based MPC without CasADi/IPOPT**  
+- Integrated with **Nav2** for trajectory tracking using costmap penalties  
+- Provided **extensive documentation, code comments, and exercises**  
+- Used in teaching labs to show **real-time control, optimization, and differentiable robotics** concepts  
+
+---
+
+### Frameworks & Tools  
+![ROS 2](https://img.shields.io/badge/ROS2-Jazzy-blue?logo=ros)  
+![Nav2](https://img.shields.io/badge/Nav2-Navigation-brightgreen?logo=ros)  
+![PyTorch](https://img.shields.io/badge/PyTorch-2.2-red?logo=pytorch)  
+![Python](https://img.shields.io/badge/Python-3.10-yellow?logo=python)  
+![TorchOptimizer](https://img.shields.io/badge/Optimizers-Adam%2FLBFGS%2FRMSProp-lightgrey)  
+![Docker](https://img.shields.io/badge/Docker-Reproducibility-blue?logo=docker)  
+
+*Built and tested under ROS 2 Jazzy using CUDA-enabled PyTorch 2.2.*
+
+---
+
+### Links  
+- [GitHub Repository](https://github.com/KevinEppacher/mpc_local_planner.git)
+
+---
+
+### Summary  
+A **university lab project** showcasing optimization for robotics using **PyTorch as a numerical solver**.  
+It bridges classical control and differentiable programming by re-implementing nMPC entirely in PyTorch — illustrating how learning-based and optimization-based control can converge within modern ROS 2 pipelines.
+
+## **4. Automated Sensitivity Measurement System (AIRSKIN)**
 
 <center>
 <video width="70%" controls autoplay loop muted>
@@ -158,7 +219,7 @@ Automated robotic test bench for AIRSKIN pad calibration — measuring and visua
 
 ---
 
-## **4. Monte Carlo Localization (Particle Filter) for Mobile Robots**
+## **5. Monte Carlo Localization (Particle Filter) for Mobile Robots**
 
 <center>
 <img src="./videos/mcl.gif" width="70%" alt="Monte Carlo Localization simulation in Gazebo">
@@ -201,7 +262,7 @@ Robust and efficient Monte Carlo Localization achieving high accuracy with minim
 
 ---
 
-## **5. Design of a Cascaded Position and Velocity Controller for a Pan–Tilt Camera Tracking UAVs (Bachelor Thesis)**
+## **6. Design of a Cascaded Position and Velocity Controller for a Pan–Tilt Camera Tracking UAVs (Bachelor Thesis)**
 
 <center>
 <video width="70%" controls autoplay loop muted>

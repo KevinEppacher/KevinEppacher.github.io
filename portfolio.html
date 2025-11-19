@@ -136,6 +136,7 @@ It comes with practical examples (CarRacing, LunarLander, CartPole) and extensiv
 <p>A professionally developed <strong>ROS 2 reinforcement learning framework</strong> unifying algorithm design, training, and evaluation in robotics.<br />
 It bridges <strong>educational usability</strong> and <strong>research-grade scalability</strong>, empowering students, researchers, and engineers to prototype and deploy intelligent robotic behaviors efficiently.</p>
 <hr />
+<hr />
 <h2><strong>2. Nonlinear Model Predictive Controller (nMPC) for Differential Drive Mobile Robot</strong></h2>
 <center>
 <video width="70%" controls autoplay loop muted>
@@ -162,6 +163,9 @@ The controller minimizes a cost function while enforcing <strong>hard constraint
 </ul>
 <p>Results demonstrate smoother, dynamically feasible trajectories, particularly in cluttered or narrow environments.<br />
 The entire system was simulated in <strong>Gazebo</strong> using a <strong>TurtleBot</strong>, with a GPU-enabled <strong>Docker</strong> container for reproducibility.</p>
+<blockquote>
+<p><em>See also the <a href="#3-optimization-lab-pytorch-based-mpc-for-robotics">Optimization Lab – PyTorch-based MPC (ROS 2)</a> for a lightweight educational re-implementation using PyTorch instead of CasADi.</em></p>
+</blockquote>
 <hr />
 <h3>Frameworks &amp; Libraries</h3>
 <p><img src="https://img.shields.io/badge/ROS-Noetic-blue?logo=ros" alt="ROS Noetic" /><br />
@@ -178,7 +182,55 @@ The entire system was simulated in <strong>Gazebo</strong> using a <strong>Turtl
 <li><a href="./papers/nMPC.pdf">Download unpublished Research Paper (PDF)</a></li>
 </ul>
 <hr />
-<h2><strong>3. Automated Sensitivity Measurement System (AIRSKIN)</strong></h2>
+<h3>Summary</h3>
+<p>A high-performance nonlinear MPC for mobile robots using CasADi and IPOPT — delivering smooth, constraint-aware motion planning and serving as a foundation for subsequent PyTorch-based re-implementations in ROS 2.</p>
+<hr />
+<h2><strong>3. Optimization Lab – PyTorch-Based MPC for Robotics</strong></h2>
+<center>
+<img src="./videos/mpc_demo_1.gif" width="70%">
+</center>
+
+<hr />
+<h3>Description</h3>
+<p>A <strong>PyTorch-based Model Predictive Control (MPC)</strong> framework developed as part of a <strong>university optimization lab</strong>, demonstrating how numerical optimization can be applied to control and planning problems in robotics.<br />
+Unlike the earlier CasADi-based MPC, this version leverages <strong>PyTorch autograd and optimizers (Adam/LBFGS)</strong> directly — without relying on external NLP solvers — to teach students how to <em>formulate and solve control problems from first principles</em>.</p>
+<p>Developed as a <strong>commissioned project</strong>, the lab provides a complete <strong>ROS 2 Jazzy package (<code>mpc_local_planner</code>)</strong> that serves as both a tutorial and a working local planner.<br />
+It includes comprehensive documentation explaining:</p>
+<ul>
+<li>optimization in localization, planning, and control,</li>
+<li>MPC cost shaping and constraints,</li>
+<li>and real-time optimization loops using PyTorch tensors.</li>
+</ul>
+<hr />
+<h3>Key Highlights</h3>
+<ul>
+<li>Created an <strong>Optimization Lab</strong> for the <em>UAS Technikum Vienna</em> robotics curriculum</li>
+<li>Developed a <strong>didactic ROS 2 Jazzy package</strong>: <code>mpc_local_planner</code></li>
+<li>Implemented <strong>nMPC with PyTorch optimizers</strong> (Adam, LBFGS, RMSProp)</li>
+<li>Demonstrated <strong>gradient-based MPC without CasADi/IPOPT</strong></li>
+<li>Integrated with <strong>Nav2</strong> for trajectory tracking using costmap penalties</li>
+<li>Provided <strong>extensive documentation, code comments, and exercises</strong></li>
+<li>Used in teaching labs to show <strong>real-time control, optimization, and differentiable robotics</strong> concepts</li>
+</ul>
+<hr />
+<h3>Frameworks &amp; Tools</h3>
+<p><img src="https://img.shields.io/badge/ROS2-Jazzy-blue?logo=ros" alt="ROS 2" /><br />
+<img src="https://img.shields.io/badge/Nav2-Navigation-brightgreen?logo=ros" alt="Nav2" /><br />
+<img src="https://img.shields.io/badge/PyTorch-2.2-red?logo=pytorch" alt="PyTorch" /><br />
+<img src="https://img.shields.io/badge/Python-3.10-yellow?logo=python" alt="Python" /><br />
+<img src="https://img.shields.io/badge/Optimizers-Adam%2FLBFGS%2FRMSProp-lightgrey" alt="TorchOptimizer" /><br />
+<img src="https://img.shields.io/badge/Docker-Reproducibility-blue?logo=docker" alt="Docker" /></p>
+<p><em>Built and tested under ROS 2 Jazzy using CUDA-enabled PyTorch 2.2.</em></p>
+<hr />
+<h3>Links</h3>
+<ul>
+<li><a href="https://github.com/KevinEppacher/mpc_local_planner.git">GitHub Repository</a></li>
+</ul>
+<hr />
+<h3>Summary</h3>
+<p>A <strong>university lab project</strong> showcasing optimization for robotics using <strong>PyTorch as a numerical solver</strong>.<br />
+It bridges classical control and differentiable programming by re-implementing nMPC entirely in PyTorch — illustrating how learning-based and optimization-based control can converge within modern ROS 2 pipelines.</p>
+<h2><strong>4. Automated Sensitivity Measurement System (AIRSKIN)</strong></h2>
 <center>
 <video width="70%" controls autoplay loop muted>
   <source src="./videos/sensibility_measurements.mp4" type="video/mp4">
@@ -215,7 +267,7 @@ The entire system was simulated in <strong>Gazebo</strong> using a <strong>Turtl
 <h3>Summary</h3>
 <p>Automated robotic test bench for AIRSKIN pad calibration — measuring and visualizing tactile sensitivity through force–displacement mapping.</p>
 <hr />
-<h2><strong>4. Monte Carlo Localization (Particle Filter) for Mobile Robots</strong></h2>
+<h2><strong>5. Monte Carlo Localization (Particle Filter) for Mobile Robots</strong></h2>
 <center>
 <img src="./videos/mcl.gif" width="70%" alt="Monte Carlo Localization simulation in Gazebo">
 </center>
@@ -249,7 +301,7 @@ The entire system was simulated in <strong>Gazebo</strong> using a <strong>Turtl
 <h3>Summary</h3>
 <p>Robust and efficient Monte Carlo Localization achieving high accuracy with minimal particles through adaptive resampling — enabling fast and reliable robot pose estimation in dynamic indoor environments.</p>
 <hr />
-<h2><strong>5. Design of a Cascaded Position and Velocity Controller for a Pan–Tilt Camera Tracking UAVs (Bachelor Thesis)</strong></h2>
+<h2><strong>6. Design of a Cascaded Position and Velocity Controller for a Pan–Tilt Camera Tracking UAVs (Bachelor Thesis)</strong></h2>
 <center>
 <video width="70%" controls autoplay loop muted>
   <source src="./videos/OptoFence_Video_3.mp4" type="video/mp4">
