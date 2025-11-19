@@ -3,13 +3,16 @@
 A curated selection of my robotics research and engineering work, focused on real-time control, 3D perception, optimization, and applied AI-driven autonomy.
 
 # Table of Contents
-- [1. ROS 2 Reinforcement Learning Framework](#rl-framework)
-- [2. Nonlinear MPC (CasADi/IPOPT)](#nmpc-casadi)
-- [3. PyTorch-Based MPC](#mpc-pytorch)
-- [4. AIRSKIN Sensitivity Measurement System](#airskin)
-- [5. Monte Carlo Localization](#mcl)
-- [6. Pan–Tilt UAV Tracking](#pt-uav)
-- [7. Personal Projects](#personal-projects)
+- [1. SAGE – Semantic-Aware Guided Exploration](#sage)
+- [2. ROS 2 Reinforcement Learning Framework](#rl-framework)
+- [3. Nonlinear MPC (CasADi/IPOPT)](#nmpc-casadi)
+- [4. PyTorch-Based MPC](#mpc-pytorch)
+- [5. AIRSKIN Sensitivity Measurement System](#airskin)
+- [6. Monte Carlo Localization](#mcl)
+- [7. Pan–Tilt UAV Tracking](#pt-uav)
+- [8. Personal Projects](#personal-projects)
+
+<a id="sage"></a>
 
 ## **1. SAGE – Semantic-Aware Guided Exploration with Persistent Memory (Master Thesis)**
 
@@ -115,7 +118,8 @@ Through **persistent semantic memory** and **cross-modal fusion**, it enables ro
 
 ---
 <a id="rl-framework"></a>
-## **1. ROS 2 Reinforcement Learning Framework**
+
+## **2. ROS 2 Reinforcement Learning Framework**
 
 A modular ROS 2 reinforcement-learning framework built for real-time robotics applications, enabling vectorized training, live introspection, and plug-in environments for reproducible DRL research.
 
@@ -184,7 +188,8 @@ It bridges **educational usability** and **research-grade scalability**, empower
 ---
 
 <a id="nmpc-casadi"></a>
-## **2. Nonlinear Model Predictive Controller (nMPC) for Differential Drive Mobile Robot**
+
+## **3. Nonlinear Model Predictive Controller (nMPC) for Differential Drive Mobile Robot**
 
 A high-precision nonlinear control system for differential-drive robots that predicts future motion and optimizes control inputs over a finite horizon — enabling smooth, constraint-aware trajectory tracking.
 
@@ -246,7 +251,8 @@ A high-performance nonlinear MPC for mobile robots using CasADi and IPOPT — de
 ---
 
 <a id="mpc-pytorch"></a>
-## **3. Optimization Lab – PyTorch-Based MPC for Robotics**
+
+## **4. Optimization Lab – PyTorch-Based MPC for Robotics**
 
 An educational ROS 2 lab demonstrating real-time control through gradient-based optimization with PyTorch — teaching how to implement MPC without external solvers.
 
@@ -307,7 +313,8 @@ It bridges classical control and differentiable programming by re-implementing n
 ---
 
 <a id="airskin"></a>
-## **4. Automated Sensitivity Measurement System (AIRSKIN)**
+
+## **5. Automated Sensitivity Measurement System (AIRSKIN)**
 
 Designed and implemented an automated force–displacement measurement system using a UR10 robot, FT sensor, and RGB-D visualization — enabling reproducible AIRSKIN pad calibration.
 
@@ -360,7 +367,8 @@ Automated robotic test bench for AIRSKIN pad calibration — measuring and visua
 ---
 
 <a id="mcl"></a>
-## **5. Monte Carlo Localization (Particle Filter) for Mobile Robots**
+
+## **6. Monte Carlo Localization (Particle Filter) for Mobile Robots**
 
 Custom particle filter for 2D localization with optimized raycasting and resampling, achieving reliable pose estimation with only 100 particles.
 
@@ -410,7 +418,8 @@ Robust and efficient Monte Carlo Localization achieving high accuracy with minim
 ---
 
 <a id="pt-uav"></a>
-## **6. Design of a Cascaded Position and Velocity Controller for a Pan–Tilt Camera Tracking UAVs (Bachelor Thesis)**
+
+## **7. Design of a Cascaded Position and Velocity Controller for a Pan–Tilt Camera Tracking UAVs (Bachelor Thesis)**
 
 A cascaded control system enabling real-time UAV tracking with a high-speed pan–tilt camera, combining field-oriented motor control and Kalman-filtered trajectory prediction.
 
@@ -448,6 +457,7 @@ Designed a cascaded position–velocity control system for a high-speed pan–ti
 ---
 
 <a id="personal-projects"></a>
+
 # Personal Projects
 
 Outside of my academic research and industrial work, I enjoy building and experimenting with robotic systems in my free time — exploring mechanical design, embedded control, and intelligent motion planning.  
