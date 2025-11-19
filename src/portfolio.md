@@ -1,9 +1,11 @@
 # Professional Work
 
-Below is a selection of my research and engineering projects, spanning semantic exploration, optimization-based control, and applied industrial robotics.
+A curated selection of my robotics research and engineering work, focused on real-time control, 3D perception, optimization, and applied AI-driven autonomy.
 
 ---
 ## **1. ROS 2 Reinforcement Learning Framework**
+
+A modular ROS 2 reinforcement-learning framework built for real-time robotics applications, enabling vectorized training, live introspection, and plug-in environments for reproducible DRL research.
 
 <center>
 <img src="./videos/car_racing_demo.gif" width="70%">
@@ -175,6 +177,8 @@ It bridges classical control and differentiable programming by re-implementing n
 
 ## **4. Automated Sensitivity Measurement System (AIRSKIN)**
 
+Designed and implemented an automated force–displacement measurement system using a UR10 robot, FT sensor, and RGB-D visualization — enabling reproducible AIRSKIN pad calibration.
+
 <center>
 <video width="70%" controls autoplay loop muted>
   <source src="./videos/sensibility_measurements.mp4" type="video/mp4">
@@ -220,6 +224,8 @@ Automated robotic test bench for AIRSKIN pad calibration — measuring and visua
 ---
 
 ## **5. Monte Carlo Localization (Particle Filter) for Mobile Robots**
+
+Custom particle filter for 2D localization with optimized raycasting and resampling, achieving reliable pose estimation with only 100 particles.
 
 <center>
 <img src="./videos/mcl.gif" width="70%" alt="Monte Carlo Localization simulation in Gazebo">
@@ -289,7 +295,7 @@ Developed at **Automation and Control Institute (TU Wien)**, the system enables 
 ---
 
 ### Summary
-Developed a cascaded position–velocity control system with real-time sensor fusion for UAV tracking using a pan–tilt camera — achieving high-speed precision control and robust prediction even under visual occlusions.
+Designed a cascaded position–velocity control system for a high-speed pan–tilt camera tracking UAVs, integrating FOC-driven PMSM motors and Kalman-filtered trajectory prediction for robust real-time tracking.
 
 ---
 
@@ -301,6 +307,8 @@ These projects allow me to prototype, test, and iterate on new ideas that blend 
 ---
 
 ## **1. 6-DOF Robotic Arm – Design, Simulation & Control**
+
+Designed and built a 6-DOF robotic arm using stepper-driven harmonic-drive-inspired gear reductions, integrated with ROS MoveIt for collision-aware motion planning and synchronized sim-to-real execution.
 
 <center>
 <video width="70%" controls autoplay loop muted>
