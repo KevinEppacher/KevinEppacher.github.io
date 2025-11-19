@@ -87,6 +87,13 @@ Performance is measured using **Success Rate (SR)** and **Success weighted by Pa
   </script>
 </center>
 
+### Key Features  
+- Designed a full multi-modal semantic mapping pipeline combining depth, RGB, VLM reasoning, and 3D fusion.
+- Implemented a persistent semantic memory layer using OpenFusion’s voxel representation.
+- Developed frontier-based navigation with semantic scoring for multi-object search.
+- Integrated YOLO-E, BLIP-2, and SEEM into real-time ROS 2 perception pipelines.
+- Built a full evaluation pipeline using SR/SPL across multiple object classes.
+
 The project is currently under **active development**, with further experiments in **semantic fusion**, **frontier optimization**, and **real-world deployment** in progress.
 
 ---
