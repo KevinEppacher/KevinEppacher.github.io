@@ -1,40 +1,95 @@
 # Professional Work
 
-Last year, I developed a nonlinear Model Predictive Controller (nMPC) based local planner for a Differential Drive Mobile Robot (DDMR) within the ROS Noetic navigation stack.
+## Nonlinear Model Predictive Controller (nMPC) for Differential Drive Mobile Robot
 
-Unlike conventional reactive planners, an nMPC uses a mathematical model (in this case, a kinematic model) to predict future states and optimize them over a defined horizon. This is done by minimizing a cost function while satisfying both soft and hard constraints, such as obstacle distance, velocity bounds, and input limits.
-The local planner was implemented entirely in Python, utilizing the CasADi framework for formulating the nonlinear optimization problem. The IPOPT solver (Interior Point Optimizer) was used to solve the problem at runtime efficiently.
-
-As part of the evaluation, I compared the nMPC planner against established ROS local planners:
-- Dynamic Window Approach (DWA)
-- Timed Elastic Band (TEB)
-The nMPC planner receives a global reference trajectory (e.g., from an RRT-based global planner) and computes optimized control inputs at higher frequency to achieve smooth and safe local obstacle avoidance, even in dynamic and narrow environments.
-
-- The system was simulated in Gazebo with a TurtleBot platform and fully integrated with ROS Noetic.
-- 🐳 A GPU-enabled Docker container is provided for fast and reproducible setup.
-- 📁 The GitHub repository includes the full source code, parameter tuning, scientific paper, and presentation slides.
-🔗 https://lnkd.in/dgpq7y2Y
-
-Hashtag#Robotics Hashtag#MPC Hashtag#nMPC Hashtag#CasADi Hashtag#IPOPT Hashtag#PathPlanning Hashtag#ROS Hashtag#ROSNoetic Hashtag#
-
-/home/kevin/Documents/Allgemein/KevinEppacher.github.io/videos/nMPC.mp4
+<center>
+<video width="70%" controls autoplay loop muted>
+  <source src="./videos/nMPC.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+</center>
 
 ---
 
-Collaborative Project with AIRSKIN– Automated Sensitivity Measurement System 🤖📏
-Last year, Moritz Dönges and I had the opportunity to design an automated measurement system in collaboration with AIRSKIN at the University of Applied Sciences Technikum Wien.
-🎯 The goal was to measure the force required to trigger an AIRSKIN pad and the displacement at that moment. This allowed us to calculate the spring constant, thereby defining the sensitivity at each measurement point. This system plays an important role in identifying weak points and supporting further development of AIRSKIN pads.
-🛠️ The system was built using ROS Noetic and Docker. We developed a custom C++ ImGui HMI that allows the UR10 robot to be switched between Freedrive Mode for teaching points and External Control Mode for automated measurements. Thanks to the ROS UR hardware interface, the robot can seamlessly switch between modes, start/stop programs, and communicate with the FT sensor via UR ROS bridge (TCP/IP protocol).
-📍 Once all points are taught, a MoveIt MoveGroup program automatically moves the robot to each point, measuring and visualizing the applied force in RViz. A 3D camera visualizes a point cloud, allowing for intuitive analysis of the AIRSKIN pad and the corresponding force vectors.
-🚧 Future plans include integrating RGB-D-based obstacle avoidance to dynamically navigate between measurement points.
-The entire system was also implemented in Gazebo for simulation purposes.
-🖥️ The project is available here:
-https://lnkd.in/dYwSsFtR
+### Description
+A **nonlinear Model Predictive Controller (nMPC)** based local planner developed for a **Differential Drive Mobile Robot (DDMR)** within the **ROS Noetic** navigation stack.  
 
-Hashtag#Robotics Hashtag#ROS Hashtag#AIRSKIN Hashtag#UR10 Hashtag#Automation Hashtag#ForceMeasurement Hashtag#HumanRob
+Unlike conventional reactive planners, the nMPC predicts future robot states through a **kinematic model** and optimizes control inputs over a finite horizon.  
+The controller minimizes a cost function while enforcing **hard constraints** on obstacle clearance, velocity, and input bounds.
 
-Paths:
-videos/sensibility_measurements.mp4
+The implementation leverages:
+- **CasADi** for nonlinear optimization formulation  
+- **IPOPT** (Interior Point Optimizer) for efficient real-time solving  
+- **Python / ROS Noetic** for seamless runtime integration  
+
+The planner was benchmarked against standard local planners:
+- **Dynamic Window Approach (DWA)**
+- **Timed Elastic Band (TEB)**
+
+Results demonstrate smoother, dynamically feasible trajectories, particularly in cluttered or narrow environments.  
+The entire system was simulated in **Gazebo** using a **TurtleBot**, with a GPU-enabled **Docker** container for reproducibility.
+
+---
+
+### Frameworks & Libraries
+- ROS Noetic  
+- CasADi  
+- IPOPT  
+- Python  
+- Gazebo  
+- Docker  
+
+---
+
+### Links
+- [GitHub Repository](https://github.com/KevinEppacher/walle_ws.git)
+- [Download unpublished Research Paper (PDF)](./papers/nMPC.pdf)
+---
+
+## Automated Sensitivity Measurement System (AIRSKIN)
+
+<center>
+<video width="70%" controls autoplay loop muted>
+  <source src="./videos/sensibility_measurements.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+</center>
+
+---
+
+### Description
+A **collaborative project with [Blue Danube Robotics – AIRSKIN](https://www.airskin.io/)** developed at **UAS Technikum Vienna** to automate tactile pad sensitivity measurements.  
+
+The system measures the **force and displacement** required to trigger an AIRSKIN pad at defined grid points. From this, the **spring constant** and **local sensitivity** are derived to detect mechanical weak points and support further product development.
+
+Built entirely with **ROS Noetic** and **Docker**, the system integrates:
+- A **UR10** industrial robot  
+- A **force–torque (FT) sensor** connected via the UR ROS bridge (TCP/IP)  
+- A **custom ImGui C++ HMI** for switching between *Freedrive Mode* (teaching) and *External Control Mode* (automated measurement)  
+
+Once all measurement points are defined, **MoveIt** executes a fully automated sequence. The system visualizes force vectors in **RViz** and overlays a 3D point cloud from an integrated RGB-D camera, enabling intuitive analysis of pad deformation and sensitivity.
+
+A full **Gazebo simulation** replicates the entire setup for safe testing and repeatable experiments.
+
+---
+
+### Frameworks & Libraries
+- ROS Noetic  
+- MoveIt  
+- ImGui (C++ GUI)  
+- RViz / Gazebo  
+- Docker  
+- UR ROS Driver / TCP-IP Bridge  
+
+---
+
+### Links
+- [GitHub Repository](https://github.com/KevinEppacher/goldilocks_sensibility_ws.git)
+
+---
+
+### Summary
+Automated robotic test bench for AIRSKIN pad calibration — measuring and visualizing tactile sensitivity through force–displacement mapping.
 
 
 ---
