@@ -11,6 +11,108 @@ A curated selection of my robotics research and engineering work, focused on rea
 - [6. Pan–Tilt UAV Tracking](#pt-uav)
 - [7. Personal Projects](#personal-projects)
 
+## **1. SAGE – Semantic-Aware Guided Exploration with Persistent Memory (Master Thesis)**
+
+A hybrid semantic exploration framework for **multi-object search with persistent memory**, integrating **vision-language models**, **semantic mapping**, and **frontier-based navigation** for intelligent exploration and reasoning.
+
+<center>
+  <video id="searchVideo" width="70%" controls autoplay loop muted>
+    <source src="./videos/search_fridge.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <figcaption style="font-size:0.9em; color:gray; margin-top:6px;">
+    Robot searching for text prompt: <em>"fridge"</em>
+  </figcaption>
+
+  <script>
+    const v = document.getElementById('searchVideo');
+    v.playbackRate = 10.0;  // plays 10× faster
+  </script>
+</center>
+
+
+<div align="center" style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+  <figure style="margin:0;">
+    <img src="./img/memory.png" width="450" style="border-radius:8px;">
+    <figcaption style="font-size:0.9em; color:gray; margin-top:5px;">
+      Persistent 3D semantic memory representation for text prompt "somewhere  to sleep"
+    </figcaption>
+  </figure>
+
+  <figure style="margin:0;">
+    <img src="./img/isaac_sim_demo.png" width="450" style="border-radius:8px;">
+    <figcaption style="font-size:0.9em; color:gray; margin-top:5px;">
+      Semantic exploration in Isaac Sim environment
+    </figcaption>
+  </figure>
+</div>
+
+---
+
+<details>
+<summary>📘 Read full description</summary>
+
+### Description  
+**SAGE (Semantic-Aware Guided Exploration)** is a framework designed for **multi-object search** in unknown environments using **persistent 3D semantic memory**.  
+It combines **exploration**, **semantic understanding**, and **memory-based reasoning** to enable robots to search and identify objects efficiently using open-vocabulary prompts.
+
+The system integrates multiple AI and robotics components:
+- **OpenFusion** as a 3D semantic SLAM mapper, acting as persistent memory for detected objects.  
+- **Frontier-based exploration** for geometric expansion of the map, enhanced by a **Vision-Language Model (VLM)** scoring system to evaluate which frontiers are most likely to contain queried objects.  
+- **YOLO-E** for real-time object detection and **BLIP-2** for multimodal grounding, fused with **OpenFusion’s semantic map** for robust and context-aware detection.  
+- The combination of **VLM-based reasoning** and **semantic memory** allows the system to continuously refine its understanding of the environment and improve future searches.
+
+**Evaluation:**  
+To validate SAGE, 3D semantic segmentation with OpenFusion is used to compare object detection and mapping accuracy against the same semantic classes.  
+Performance is measured using **Success Rate (SR)** and **Success weighted by Path Length (SPL)** metrics for single and multi-object search tasks.
+
+<center>
+  <video id="evalVideo" width="70%" controls autoplay loop muted>
+    <source src="./videos/evaluation_pcl.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <figcaption style="font-size:0.9em; color:gray; margin-top:6px; max-width:70%;">
+    Dynamic semantic evaluation map filtering for <em>chair</em>, <em>TV</em>, <em>sofa</em>, and <em>fridge</em> —
+    continuously calculating the shortest path to the nearest object.
+  </figcaption>
+
+  <script>
+    const v = document.getElementById('evalVideo');
+    v.playbackRate = 3.0;  // plays at 3× speed
+  </script>
+</center>
+
+The project is currently under **active development**, with further experiments in **semantic fusion**, **frontier optimization**, and **real-world deployment** in progress.
+
+---
+
+### Frameworks & Tools  
+![ROS 2](https://img.shields.io/badge/ROS2-Humble-blue?logo=ros)  
+![OpenFusion](https://img.shields.io/badge/OpenFusion-3D%20Semantic%20Mapping-purple)  
+![YOLO-E](https://img.shields.io/badge/YOLO--E-Zero--Shot%20Detection-red)  
+![BLIP2](https://img.shields.io/badge/BLIP2-Vision--Language%20Model-orange)  
+![SEEM](https://img.shields.io/badge/SEEM-Segment%20Everything%20Everywhere-blueviolet)  
+![Nav2](https://img.shields.io/badge/Nav2-Frontier%20Exploration-brightgreen?logo=ros)  
+![Isaac Sim](https://img.shields.io/badge/Isaac--Sim-Simulation-lightgrey?logo=nvidia)  
+![Python](https://img.shields.io/badge/Python-3.10-yellow?logo=python)  
+![Docker](https://img.shields.io/badge/Docker-Reproducibility-blue?logo=docker)
+
+---
+
+### Links  
+- [Download Master Thesis (PDF)](./papers/SAGE.pdf)
+
+---
+
+### Summary  
+**SAGE** introduces a semantic exploration architecture that fuses **frontier-based exploration**, **3D mapping**, and **vision-language models** into a unified pipeline for **open-vocabulary multi-object search**.  
+Through **persistent semantic memory** and **cross-modal fusion**, it enables robots to recall, reason, and plan toward objects intelligently during long-term autonomous missions.
+
+</details>
+
+
 ---
 <a id="rl-framework"></a>
 ## **1. ROS 2 Reinforcement Learning Framework**
