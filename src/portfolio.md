@@ -174,6 +174,11 @@ Developed a cascaded position–velocity control system with real-time sensor fu
 
 # Personal Projects
 
+Outside of my academic research and industrial work, I enjoy building and experimenting with robotic systems in my free time — exploring mechanical design, embedded control, and intelligent motion planning.  
+These projects allow me to prototype, test, and iterate on new ideas that blend classical robotics with modern AI-driven methods.
+
+---
+
 ## **1. 6-DOF Robotic Arm – Design, Simulation & Control**
 
 <center>
