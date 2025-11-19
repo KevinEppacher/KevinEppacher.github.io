@@ -3,8 +3,68 @@
 Below is a selection of my research and engineering projects, spanning semantic exploration, optimization-based control, and applied industrial robotics.
 
 ---
+## **1. ROS 2 Reinforcement Learning Framework**
 
-## **1. Nonlinear Model Predictive Controller (nMPC) for Differential Drive Mobile Robot**
+<center>
+<img src="./videos/car_racing_demo.gif" width="70%">
+</center>
+
+---
+
+### Description  
+A modular **ROS 2 Deep Reinforcement Learning (DRL) framework** developed as a **commissioned project** to provide a standardized, extensible platform for end-to-end learning in robotics.  
+The goal was to **lower the entry barrier for students and research teams** by enabling quick prototyping, reproducible training, and real-time introspection within ROS 2.
+
+The framework integrates tightly with **Stable-Baselines3** and supports **plug-in-based environments**, allowing new tasks to be added without modifying the RL core.  
+It comes with practical examples (CarRacing, LunarLander, CartPole) and extensive documentation covering **observation/action space design**, **reward shaping**, and **hyperparameter tuning**.
+
+It also supports **vectorized environments** for parallel training and can **introspect live ROS 2 topics during learning** — enabling developers to visualize and debug agent behavior in real time, as shown below.
+
+<center>
+<img src="./img/vec_env_car_racing_training.png" width="70%" style="margin:10px;">
+</center>
+
+The framework emphasizes **reproducibility, scalability, and transparency**, making it an ideal foundation for both industrial and educational reinforcement-learning applications.
+
+---
+
+### Key Features  
+- Unified training and evaluation pipeline for ROS 2 environments  
+- Plug-in architecture for easily registering new environments  
+- TensorBoard integration and live ROS 2 topic publishing during training  
+- Supports vectorized environments for high-throughput parallel learning  
+- Real-time introspection of published ROS 2 topics to monitor agent behavior  
+- GPU-accelerated PPO, SAC, and TD3 training support  
+- Ready-to-use environments (CartPole, LunarLander, CarRacing)  
+- Clear YAML-based configuration for all algorithms  
+
+---
+
+### Frameworks & Tools  
+![ROS 2](https://img.shields.io/badge/ROS2-Jazzy-blue?logo=ros)  
+![Stable-Baselines3](https://img.shields.io/badge/Stable--Baselines3-DRL%20Library-orange)  
+![PyTorch](https://img.shields.io/badge/PyTorch-2.2-red?logo=pytorch)  
+![Gymnasium](https://img.shields.io/badge/Gymnasium-Environments-lightgrey?logo=openai)  
+![Python](https://img.shields.io/badge/Python-3.10-yellow?logo=python)  
+![TensorBoard](https://img.shields.io/badge/TensorBoard-Visualization-orange?logo=tensorflow)  
+![Docker](https://img.shields.io/badge/Docker-Reproducibility-blue?logo=docker)
+
+*Built and tested under ROS 2 Jazzy with CUDA-enabled PyTorch 2.2 for GPU training.*
+
+---
+
+### Links  
+- [GitHub Repository](https://github.com/KevinEppacher/ros2_reinforcement_learning_framework.git)
+
+---
+
+### Summary  
+A professionally developed **ROS 2 reinforcement learning framework** unifying algorithm design, training, and evaluation in robotics.  
+It bridges **educational usability** and **research-grade scalability**, empowering students, researchers, and engineers to prototype and deploy intelligent robotic behaviors efficiently.
+
+---
+
+## **2. Nonlinear Model Predictive Controller (nMPC) for Differential Drive Mobile Robot**
 
 <center>
 <video width="70%" controls autoplay loop muted>
@@ -52,7 +112,7 @@ The entire system was simulated in **Gazebo** using a **TurtleBot**, with a GPU-
 
 ---
 
-## **2. Automated Sensitivity Measurement System (AIRSKIN)**
+## **3. Automated Sensitivity Measurement System (AIRSKIN)**
 
 <center>
 <video width="70%" controls autoplay loop muted>
@@ -98,7 +158,7 @@ Automated robotic test bench for AIRSKIN pad calibration — measuring and visua
 
 ---
 
-## **3. Monte Carlo Localization (Particle Filter) for Mobile Robots**
+## **4. Monte Carlo Localization (Particle Filter) for Mobile Robots**
 
 <center>
 <img src="./videos/mcl.gif" width="70%" alt="Monte Carlo Localization simulation in Gazebo">
@@ -141,7 +201,7 @@ Robust and efficient Monte Carlo Localization achieving high accuracy with minim
 
 ---
 
-## **4. Design of a Cascaded Position and Velocity Controller for a Pan–Tilt Camera Tracking UAVs (Bachelor Thesis)**
+## **5. Design of a Cascaded Position and Velocity Controller for a Pan–Tilt Camera Tracking UAVs (Bachelor Thesis)**
 
 <center>
 <video width="70%" controls autoplay loop muted>
