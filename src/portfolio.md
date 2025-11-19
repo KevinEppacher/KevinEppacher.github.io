@@ -13,6 +13,9 @@ A modular ROS 2 reinforcement-learning framework built for real-time robotics ap
 
 ---
 
+<details>
+<summary>📘 Read full description</summary>
+
 ### Description  
 A modular **ROS 2 Deep Reinforcement Learning (DRL) framework** developed as a **commissioned project** to provide a standardized, extensible platform for end-to-end learning in robotics.  
 The goal was to **lower the entry barrier for students and research teams** by enabling quick prototyping, reproducible training, and real-time introspection within ROS 2.
@@ -64,11 +67,13 @@ The framework emphasizes **reproducibility, scalability, and transparency**, mak
 A professionally developed **ROS 2 reinforcement learning framework** unifying algorithm design, training, and evaluation in robotics.  
 It bridges **educational usability** and **research-grade scalability**, empowering students, researchers, and engineers to prototype and deploy intelligent robotic behaviors efficiently.
 
----
+</details>
 
 ---
 
 ## **2. Nonlinear Model Predictive Controller (nMPC) for Differential Drive Mobile Robot**
+
+A high-precision nonlinear control system for differential-drive robots that predicts future motion and optimizes control inputs over a finite horizon — enabling smooth, constraint-aware trajectory tracking.
 
 <center>
 <video width="70%" controls autoplay loop muted>
@@ -78,6 +83,8 @@ It bridges **educational usability** and **research-grade scalability**, empower
 </center>
 
 ---
+<details>
+<summary>📘 Read full description</summary>
 
 ### Description  
 A **nonlinear Model Predictive Controller (nMPC)** based local planner developed for a **Differential Drive Mobile Robot (DDMR)**.  
@@ -121,15 +128,21 @@ The entire system was simulated in **Gazebo** using a **TurtleBot**, with a GPU-
 ### Summary  
 A high-performance nonlinear MPC for mobile robots using CasADi and IPOPT — delivering smooth, constraint-aware motion planning and serving as a foundation for subsequent PyTorch-based re-implementations in ROS 2.
 
+</details>
+
 ---
 
 ## **3. Optimization Lab – PyTorch-Based MPC for Robotics**
+
+An educational ROS 2 lab demonstrating real-time control through gradient-based optimization with PyTorch — teaching how to implement MPC without external solvers.
 
 <center>
 <img src="./videos/mpc_demo_1.gif" width="70%">
 </center>
 
 ---
+<details>
+<summary>📘 Read full description</summary>
 
 ### Description  
 A **PyTorch-based Model Predictive Control (MPC)** framework developed as part of a **university optimization lab**, demonstrating how numerical optimization can be applied to control and planning problems in robotics.  
@@ -175,6 +188,10 @@ It includes comprehensive documentation explaining:
 A **university lab project** showcasing optimization for robotics using **PyTorch as a numerical solver**.  
 It bridges classical control and differentiable programming by re-implementing nMPC entirely in PyTorch — illustrating how learning-based and optimization-based control can converge within modern ROS 2 pipelines.
 
+</details>
+
+---
+
 ## **4. Automated Sensitivity Measurement System (AIRSKIN)**
 
 Designed and implemented an automated force–displacement measurement system using a UR10 robot, FT sensor, and RGB-D visualization — enabling reproducible AIRSKIN pad calibration.
@@ -187,6 +204,8 @@ Designed and implemented an automated force–displacement measurement system us
 </center>
 
 ---
+<details>
+<summary>📘 Read full description</summary>
 
 ### Description
 A **collaborative project with [Blue Danube Robotics – AIRSKIN](https://www.airskin.io/)** developed at **UAS Technikum Vienna** to automate tactile pad sensitivity measurements.  
@@ -221,6 +240,8 @@ Once all measurement points are defined, **MoveIt** executes a fully automated s
 ### Summary
 Automated robotic test bench for AIRSKIN pad calibration — measuring and visualizing tactile sensitivity through force–displacement mapping.
 
+</details>
+
 ---
 
 ## **5. Monte Carlo Localization (Particle Filter) for Mobile Robots**
@@ -232,6 +253,8 @@ Custom particle filter for 2D localization with optimized raycasting and resampl
 </center>
 
 ---
+<details>
+<summary>📘 Read full description</summary>
 
 ### Description
 A **Monte Carlo Localization (MCL)** system — also known as a **Particle Filter** — implemented in **C++** for **Differential Drive Mobile Robots** using **ROS Noetic**.  
@@ -266,9 +289,13 @@ The algorithm estimates a robot’s pose on a known map by maintaining a set of 
 ### Summary
 Robust and efficient Monte Carlo Localization achieving high accuracy with minimal particles through adaptive resampling — enabling fast and reliable robot pose estimation in dynamic indoor environments.
 
+</details>
+
 ---
 
 ## **6. Design of a Cascaded Position and Velocity Controller for a Pan–Tilt Camera Tracking UAVs (Bachelor Thesis)**
+
+A cascaded control system enabling real-time UAV tracking with a high-speed pan–tilt camera, combining field-oriented motor control and Kalman-filtered trajectory prediction.
 
 <center>
 <video width="70%" controls autoplay loop muted>
@@ -278,6 +305,8 @@ Robust and efficient Monte Carlo Localization achieving high accuracy with minim
 </center>
 
 ---
+<details>
+<summary>📘 Read full description</summary>
 
 ### Description
 A **control system for tracking UAVs** using a **pan–tilt camera** with cascaded position and velocity control.  
@@ -296,6 +325,8 @@ Developed at **Automation and Control Institute (TU Wien)**, the system enables 
 
 ### Summary
 Designed a cascaded position–velocity control system for a high-speed pan–tilt camera tracking UAVs, integrating FOC-driven PMSM motors and Kalman-filtered trajectory prediction for robust real-time tracking.
+
+</details>
 
 ---
 
@@ -323,6 +354,8 @@ Designed and built a 6-DOF robotic arm using stepper-driven harmonic-drive-inspi
 </center>
 
 ---
+<details>
+<summary>📘 Read full description</summary>
 
 ### Frameworks & Tools  
 ![ROS](https://img.shields.io/badge/ROS-Integration-blue?logo=ros)  
@@ -337,3 +370,5 @@ Designed and built a 6-DOF robotic arm using stepper-driven harmonic-drive-inspi
 
 ### Summary
 A 6-DOF robotic arm designed and controlled entirely through open-source tools — combining 3D-printed mechanics, ROS MoveIt motion planning, and real-to-sim synchronization for flexible robotic manipulation.
+
+</details>
