@@ -94,6 +94,9 @@ and is wrapped around the whole page content, except for the footer in this exam
 </center>
 
 <hr />
+<details>
+<summary>📘 Read full description</summary>
+
 <h3>Description</h3>
 <p>A modular <strong>ROS 2 Deep Reinforcement Learning (DRL) framework</strong> developed as a <strong>commissioned project</strong> to provide a standardized, extensible platform for end-to-end learning in robotics.<br />
 The goal was to <strong>lower the entry barrier for students and research teams</strong> by enabling quick prototyping, reproducible training, and real-time introspection within ROS 2.</p>
@@ -136,9 +139,11 @@ It comes with practical examples (CarRacing, LunarLander, CartPole) and extensiv
 <h3>Summary</h3>
 <p>A professionally developed <strong>ROS 2 reinforcement learning framework</strong> unifying algorithm design, training, and evaluation in robotics.<br />
 It bridges <strong>educational usability</strong> and <strong>research-grade scalability</strong>, empowering students, researchers, and engineers to prototype and deploy intelligent robotic behaviors efficiently.</p>
-<hr />
+</details>
+
 <hr />
 <h2><strong>2. Nonlinear Model Predictive Controller (nMPC) for Differential Drive Mobile Robot</strong></h2>
+<p>A high-precision nonlinear control system for differential-drive robots that predicts future motion and optimizes control inputs over a finite horizon — enabling smooth, constraint-aware trajectory tracking.</p>
 <center>
 <video width="70%" controls autoplay loop muted>
   <source src="./videos/nMPC.mp4" type="video/mp4">
@@ -147,6 +152,9 @@ It bridges <strong>educational usability</strong> and <strong>research-grade sca
 </center>
 
 <hr />
+<details>
+<summary>📘 Read full description</summary>
+
 <h3>Description</h3>
 <p>A <strong>nonlinear Model Predictive Controller (nMPC)</strong> based local planner developed for a <strong>Differential Drive Mobile Robot (DDMR)</strong>.</p>
 <p>Unlike conventional reactive planners, the nMPC predicts future robot states through a <strong>kinematic model</strong> and optimizes control inputs over a finite horizon.<br />
@@ -185,12 +193,19 @@ The entire system was simulated in <strong>Gazebo</strong> using a <strong>Turtl
 <hr />
 <h3>Summary</h3>
 <p>A high-performance nonlinear MPC for mobile robots using CasADi and IPOPT — delivering smooth, constraint-aware motion planning and serving as a foundation for subsequent PyTorch-based re-implementations in ROS 2.</p>
+</details>
+
 <hr />
 <h2><strong>3. Optimization Lab – PyTorch-Based MPC for Robotics</strong></h2>
+<p>An educational ROS 2 lab demonstrating real-time control through gradient-based optimization with PyTorch — teaching how to implement MPC without external solvers.</p>
 <center>
 <img src="./videos/mpc_demo_1.gif" width="70%">
 </center>
+
 <hr />
+<details>
+<summary>📘 Read full description</summary>
+
 <h3>Description</h3>
 <p>A <strong>PyTorch-based Model Predictive Control (MPC)</strong> framework developed as part of a <strong>university optimization lab</strong>, demonstrating how numerical optimization can be applied to control and planning problems in robotics.<br />
 Unlike the earlier CasADi-based MPC, this version leverages <strong>PyTorch autograd and optimizers (Adam/LBFGS)</strong> directly — without relying on external NLP solvers — to teach students how to <em>formulate and solve control problems from first principles</em>.</p>
@@ -230,6 +245,9 @@ It includes comprehensive documentation explaining:</p>
 <h3>Summary</h3>
 <p>A <strong>university lab project</strong> showcasing optimization for robotics using <strong>PyTorch as a numerical solver</strong>.<br />
 It bridges classical control and differentiable programming by re-implementing nMPC entirely in PyTorch — illustrating how learning-based and optimization-based control can converge within modern ROS 2 pipelines.</p>
+</details>
+
+<hr />
 <h2><strong>4. Automated Sensitivity Measurement System (AIRSKIN)</strong></h2>
 <p>Designed and implemented an automated force–displacement measurement system using a UR10 robot, FT sensor, and RGB-D visualization — enabling reproducible AIRSKIN pad calibration.</p>
 <center>
@@ -240,6 +258,9 @@ It bridges classical control and differentiable programming by re-implementing n
 </center>
 
 <hr />
+<details>
+<summary>📘 Read full description</summary>
+
 <h3>Description</h3>
 <p>A <strong>collaborative project with <a href="https://www.airskin.io/">Blue Danube Robotics – AIRSKIN</a></strong> developed at <strong>UAS Technikum Vienna</strong> to automate tactile pad sensitivity measurements.</p>
 <p>The system measures the <strong>force and displacement</strong> required to trigger an AIRSKIN pad at defined grid points. From this, the <strong>spring constant</strong> and <strong>local sensitivity</strong> are derived to detect mechanical weak points and support further product development.</p>
@@ -267,6 +288,8 @@ It bridges classical control and differentiable programming by re-implementing n
 <hr />
 <h3>Summary</h3>
 <p>Automated robotic test bench for AIRSKIN pad calibration — measuring and visualizing tactile sensitivity through force–displacement mapping.</p>
+</details>
+
 <hr />
 <h2><strong>5. Monte Carlo Localization (Particle Filter) for Mobile Robots</strong></h2>
 <p>Custom particle filter for 2D localization with optimized raycasting and resampling, achieving reliable pose estimation with only 100 particles.</p>
@@ -275,6 +298,9 @@ It bridges classical control and differentiable programming by re-implementing n
 </center>
 
 <hr />
+<details>
+<summary>📘 Read full description</summary>
+
 <h3>Description</h3>
 <p>A <strong>Monte Carlo Localization (MCL)</strong> system — also known as a <strong>Particle Filter</strong> — implemented in <strong>C++</strong> for <strong>Differential Drive Mobile Robots</strong> using <strong>ROS Noetic</strong>.</p>
 <p>The algorithm estimates a robot’s pose on a known map by maintaining a set of weighted samples (“particles”), each representing a possible state hypothesis.</p>
@@ -302,8 +328,11 @@ It bridges classical control and differentiable programming by re-implementing n
 <hr />
 <h3>Summary</h3>
 <p>Robust and efficient Monte Carlo Localization achieving high accuracy with minimal particles through adaptive resampling — enabling fast and reliable robot pose estimation in dynamic indoor environments.</p>
+</details>
+
 <hr />
 <h2><strong>6. Design of a Cascaded Position and Velocity Controller for a Pan–Tilt Camera Tracking UAVs (Bachelor Thesis)</strong></h2>
+<p>A cascaded control system enabling real-time UAV tracking with a high-speed pan–tilt camera, combining field-oriented motor control and Kalman-filtered trajectory prediction.</p>
 <center>
 <video width="70%" controls autoplay loop muted>
   <source src="./videos/OptoFence_Video_3.mp4" type="video/mp4">
@@ -312,6 +341,9 @@ It bridges classical control and differentiable programming by re-implementing n
 </center>
 
 <hr />
+<details>
+<summary>📘 Read full description</summary>
+
 <h3>Description</h3>
 <p>A <strong>control system for tracking UAVs</strong> using a <strong>pan–tilt camera</strong> with cascaded position and velocity control.<br />
 Developed at <strong>Automation and Control Institute (TU Wien)</strong>, the system enables accurate drone tracking in real time with predictive correction via <strong>Kalman filtering</strong>.</p>
@@ -325,6 +357,8 @@ Developed at <strong>Automation and Control Institute (TU Wien)</strong>, the sy
 <hr />
 <h3>Summary</h3>
 <p>Designed a cascaded position–velocity control system for a high-speed pan–tilt camera tracking UAVs, integrating FOC-driven PMSM motors and Kalman-filtered trajectory prediction for robust real-time tracking.</p>
+</details>
+
 <hr />
 <h1>Personal Projects</h1>
 <p>Outside of my academic research and industrial work, I enjoy building and experimenting with robotic systems in my free time — exploring mechanical design, embedded control, and intelligent motion planning.<br />
@@ -345,6 +379,9 @@ These projects allow me to prototype, test, and iterate on new ideas that blend 
 </center>
 
 <hr />
+<details>
+<summary>📘 Read full description</summary>
+
 <h3>Frameworks &amp; Tools</h3>
 <p><img src="https://img.shields.io/badge/ROS-Integration-blue?logo=ros" alt="ROS" /><br />
 <img src="https://img.shields.io/badge/MoveIt-Motion%20Planning-purple?logo=ros" alt="MoveIt" /><br />
@@ -356,6 +393,8 @@ These projects allow me to prototype, test, and iterate on new ideas that blend 
 <hr />
 <h3>Summary</h3>
 <p>A 6-DOF robotic arm designed and controlled entirely through open-source tools — combining 3D-printed mechanics, ROS MoveIt motion planning, and real-to-sim synchronization for flexible robotic manipulation.</p>
+</details>
+
 <!-- END GENERATED HTML HERE -->
 
   </div>
