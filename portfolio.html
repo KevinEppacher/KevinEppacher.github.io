@@ -87,13 +87,63 @@ and is wrapped around the whole page content, except for the footer in this exam
     <!-- START GENERATED HTML HERE --><h1>Professional Work</h1>
 <p>Below is a selection of my research and engineering projects, spanning semantic exploration, optimization-based control, and applied industrial robotics.</p>
 <hr />
-<h2><strong>1. Nonlinear Model Predictive Controller (nMPC) for Differential Drive Mobile Robot</strong></h2>
+<h2><strong>1. ROS 2 Reinforcement Learning Framework</strong></h2>
+<center>
+<img src="./videos/car_racing_demo.gif" width="70%">
+</center>
+
+<hr />
+<h3>Description</h3>
+<p>A modular <strong>ROS 2 Deep Reinforcement Learning (DRL) framework</strong> developed as a <strong>commissioned project</strong> to provide a standardized, extensible platform for end-to-end learning in robotics.<br />
+The goal was to <strong>lower the entry barrier for students and research teams</strong> by enabling quick prototyping, reproducible training, and real-time introspection within ROS 2.</p>
+<p>The framework integrates tightly with <strong>Stable-Baselines3</strong> and supports <strong>plug-in-based environments</strong>, allowing new tasks to be added without modifying the RL core.<br />
+It comes with practical examples (CarRacing, LunarLander, CartPole) and extensive documentation covering <strong>observation/action space design</strong>, <strong>reward shaping</strong>, and <strong>hyperparameter tuning</strong>.</p>
+<p>It also supports <strong>vectorized environments</strong> for parallel training and can <strong>introspect live ROS 2 topics during learning</strong> — enabling developers to visualize and debug agent behavior in real time, as shown below.</p>
+<center>
+<img src="./img/vec_env_car_racing_training.png" width="70%" style="margin:10px;">
+</center>
+
+<p>The framework emphasizes <strong>reproducibility, scalability, and transparency</strong>, making it an ideal foundation for both industrial and educational reinforcement-learning applications.</p>
+<hr />
+<h3>Key Features</h3>
+<ul>
+<li>Unified training and evaluation pipeline for ROS 2 environments</li>
+<li>Plug-in architecture for easily registering new environments</li>
+<li>TensorBoard integration and live ROS 2 topic publishing during training</li>
+<li>Supports vectorized environments for high-throughput parallel learning</li>
+<li>Real-time introspection of published ROS 2 topics to monitor agent behavior</li>
+<li>GPU-accelerated PPO, SAC, and TD3 training support</li>
+<li>Ready-to-use environments (CartPole, LunarLander, CarRacing)</li>
+<li>Clear YAML-based configuration for all algorithms</li>
+</ul>
+<hr />
+<h3>Frameworks &amp; Tools</h3>
+<p><img src="https://img.shields.io/badge/ROS2-Jazzy-blue?logo=ros" alt="ROS 2" /><br />
+<img src="https://img.shields.io/badge/Stable--Baselines3-DRL%20Library-orange" alt="Stable-Baselines3" /><br />
+<img src="https://img.shields.io/badge/PyTorch-2.2-red?logo=pytorch" alt="PyTorch" /><br />
+<img src="https://img.shields.io/badge/Gymnasium-Environments-lightgrey?logo=openai" alt="Gymnasium" /><br />
+<img src="https://img.shields.io/badge/Python-3.10-yellow?logo=python" alt="Python" /><br />
+<img src="https://img.shields.io/badge/TensorBoard-Visualization-orange?logo=tensorflow" alt="TensorBoard" /><br />
+<img src="https://img.shields.io/badge/Docker-Reproducibility-blue?logo=docker" alt="Docker" /></p>
+<p><em>Built and tested under ROS 2 Jazzy with CUDA-enabled PyTorch 2.2 for GPU training.</em></p>
+<hr />
+<h3>Links</h3>
+<ul>
+<li><a href="https://github.com/KevinEppacher/ros2_reinforcement_learning_framework.git">GitHub Repository</a></li>
+</ul>
+<hr />
+<h3>Summary</h3>
+<p>A professionally developed <strong>ROS 2 reinforcement learning framework</strong> unifying algorithm design, training, and evaluation in robotics.<br />
+It bridges <strong>educational usability</strong> and <strong>research-grade scalability</strong>, empowering students, researchers, and engineers to prototype and deploy intelligent robotic behaviors efficiently.</p>
+<hr />
+<h2><strong>2. Nonlinear Model Predictive Controller (nMPC) for Differential Drive Mobile Robot</strong></h2>
 <center>
 <video width="70%" controls autoplay loop muted>
   <source src="./videos/nMPC.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 </center>
+
 <hr />
 <h3>Description</h3>
 <p>A <strong>nonlinear Model Predictive Controller (nMPC)</strong> based local planner developed for a <strong>Differential Drive Mobile Robot (DDMR)</strong>.</p>
@@ -128,13 +178,14 @@ The entire system was simulated in <strong>Gazebo</strong> using a <strong>Turtl
 <li><a href="./papers/nMPC.pdf">Download unpublished Research Paper (PDF)</a></li>
 </ul>
 <hr />
-<h2><strong>2. Automated Sensitivity Measurement System (AIRSKIN)</strong></h2>
+<h2><strong>3. Automated Sensitivity Measurement System (AIRSKIN)</strong></h2>
 <center>
 <video width="70%" controls autoplay loop muted>
   <source src="./videos/sensibility_measurements.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 </center>
+
 <hr />
 <h3>Description</h3>
 <p>A <strong>collaborative project with <a href="https://www.airskin.io/">Blue Danube Robotics – AIRSKIN</a></strong> developed at <strong>UAS Technikum Vienna</strong> to automate tactile pad sensitivity measurements.</p>
@@ -164,10 +215,11 @@ The entire system was simulated in <strong>Gazebo</strong> using a <strong>Turtl
 <h3>Summary</h3>
 <p>Automated robotic test bench for AIRSKIN pad calibration — measuring and visualizing tactile sensitivity through force–displacement mapping.</p>
 <hr />
-<h2><strong>3. Monte Carlo Localization (Particle Filter) for Mobile Robots</strong></h2>
+<h2><strong>4. Monte Carlo Localization (Particle Filter) for Mobile Robots</strong></h2>
 <center>
 <img src="./videos/mcl.gif" width="70%" alt="Monte Carlo Localization simulation in Gazebo">
 </center>
+
 <hr />
 <h3>Description</h3>
 <p>A <strong>Monte Carlo Localization (MCL)</strong> system — also known as a <strong>Particle Filter</strong> — implemented in <strong>C++</strong> for <strong>Differential Drive Mobile Robots</strong> using <strong>ROS Noetic</strong>.</p>
@@ -197,13 +249,14 @@ The entire system was simulated in <strong>Gazebo</strong> using a <strong>Turtl
 <h3>Summary</h3>
 <p>Robust and efficient Monte Carlo Localization achieving high accuracy with minimal particles through adaptive resampling — enabling fast and reliable robot pose estimation in dynamic indoor environments.</p>
 <hr />
-<h2><strong>4. Design of a Cascaded Position and Velocity Controller for a Pan–Tilt Camera Tracking UAVs (Bachelor Thesis)</strong></h2>
+<h2><strong>5. Design of a Cascaded Position and Velocity Controller for a Pan–Tilt Camera Tracking UAVs (Bachelor Thesis)</strong></h2>
 <center>
 <video width="70%" controls autoplay loop muted>
   <source src="./videos/OptoFence_Video_3.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 </center>
+
 <hr />
 <h3>Description</h3>
 <p>A <strong>control system for tracking UAVs</strong> using a <strong>pan–tilt camera</strong> with cascaded position and velocity control.<br />
@@ -230,10 +283,12 @@ These projects allow me to prototype, test, and iterate on new ideas that blend 
   Your browser does not support the video tag.
 </video>
 </center>
+
 <center>
 <img src="./img/6_DOFRA_Rendered_1.png" width="45%" style="margin:10px;">
 <img src="./img/6_DOFRA_Rendered_2.png" width="45%" style="margin:10px;">
 </center>
+
 <hr />
 <h3>Frameworks &amp; Tools</h3>
 <p><img src="https://img.shields.io/badge/ROS-Integration-blue?logo=ros" alt="ROS" /><br />
