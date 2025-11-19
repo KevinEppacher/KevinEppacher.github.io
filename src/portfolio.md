@@ -2,6 +2,8 @@
 
 Below is a selection of my research and engineering projects, spanning semantic exploration, optimization-based control, and applied industrial robotics.
 
+---
+
 ## **1. Nonlinear Model Predictive Controller (nMPC) for Differential Drive Mobile Robot**
 
 <center>
@@ -33,20 +35,21 @@ The entire system was simulated in **Gazebo** using a **TurtleBot**, with a GPU-
 
 ---
 
-### Frameworks & Libraries
-- ROS Noetic
-- Nav2 
-- CasADi  
-- IPOPT  
-- Python  
-- Gazebo  
-- Docker  
+### Frameworks & Libraries  
+![ROS Noetic](https://img.shields.io/badge/ROS-Noetic-blue?logo=ros)  
+![Nav2](https://img.shields.io/badge/Nav2-Navigation-brightgreen?logo=ros)  
+![CasADi](https://img.shields.io/badge/CasADi-Optimization-orange)  
+![IPOPT](https://img.shields.io/badge/IPOPT-Solver-lightgrey)  
+![Python](https://img.shields.io/badge/Python-3.10-yellow?logo=python)  
+![Gazebo](https://img.shields.io/badge/Gazebo-Simulation-blueviolet?logo=ros)  
+![Docker](https://img.shields.io/badge/Docker-Containerization-blue?logo=docker)  
 
 ---
 
 ### Links
 - [GitHub Repository](https://github.com/KevinEppacher/walle_ws.git)
 - [Download unpublished Research Paper (PDF)](./papers/nMPC.pdf)
+
 ---
 
 ## **2. Automated Sensitivity Measurement System (AIRSKIN)**
@@ -68,21 +71,20 @@ The system measures the **force and displacement** required to trigger an AIRSKI
 Built entirely with **ROS Noetic** and **Docker**, the system integrates:
 - A **UR10** industrial robot  
 - A **force–torque (FT) sensor** connected via the UR ROS bridge (TCP/IP)  
-- A **custom ImGui C++ HMI** for switching between *Freedrive Mode* (teaching) and *External Control Mode* (automated measurement)  
+- A **custom ImGui C++ HMI** for switching between *Freedrive Mode* and *External Control Mode*  
 
-Once all measurement points are defined, **MoveIt** executes a fully automated sequence. The system visualizes force vectors in **RViz** and overlays a 3D point cloud from an integrated RGB-D camera, enabling intuitive analysis of pad deformation and sensitivity.
-
-A full **Gazebo simulation** replicates the entire setup for safe testing and repeatable experiments.
+Once all measurement points are defined, **MoveIt** executes a fully automated sequence. The system visualizes force vectors in **RViz** and overlays a 3D point cloud from an integrated RGB-D camera.
 
 ---
 
-### Frameworks & Libraries
-- ROS Noetic  
-- MoveIt  
-- ImGui (C++ GUI)  
-- RViz / Gazebo  
-- Docker  
-- UR ROS Driver / TCP-IP Bridge  
+### Frameworks & Libraries  
+![ROS Noetic](https://img.shields.io/badge/ROS-Noetic-blue?logo=ros)  
+![MoveIt](https://img.shields.io/badge/MoveIt-Motion%20Planning-purple?logo=ros)  
+![ImGui](https://img.shields.io/badge/ImGui-C%2B%2B%20GUI-lightgrey)  
+![RViz](https://img.shields.io/badge/RViz-Visualization-orange?logo=ros)  
+![Gazebo](https://img.shields.io/badge/Gazebo-Simulation-blueviolet?logo=ros)  
+![Docker](https://img.shields.io/badge/Docker-Containerization-blue?logo=docker)  
+![UR ROS Driver](https://img.shields.io/badge/UR--ROS--Driver-UR10%20Control-darkblue)  
 
 ---
 
@@ -105,31 +107,26 @@ Automated robotic test bench for AIRSKIN pad calibration — measuring and visua
 ---
 
 ### Description
-A **Monte Carlo Localization (MCL)** system — also known as a **Particle Filter** — implemented in **C++** for **Differential Drive Mobile Robots (DDMR)** using **ROS Noetic**.  
+A **Monte Carlo Localization (MCL)** system — also known as a **Particle Filter** — implemented in **C++** for **Differential Drive Mobile Robots** using **ROS Noetic**.  
 
-The algorithm estimates a robot’s pose on a known map by maintaining a set of weighted samples (“particles”), each representing a possible state hypothesis.  
-The approach combines:
-- A **motion model** for prediction (based on wheel odometry)  
-- A **sensor model** using **raycasting** for probabilistic measurement updates  
-- A **resampling step** to reinforce high-likelihood particles and discard low-likelihood ones  
+The algorithm estimates a robot’s pose on a known map by maintaining a set of weighted samples (“particles”), each representing a possible state hypothesis.
 
 ---
 
 ### Key Highlights
-- **Efficient Particle Usage:** Achieved reliable localization with only **100 particles**, compared to typical **500–3000** used by **AMCL**, while maintaining accuracy in a small apartment map.  
-- **Innovative Resampling Strategy:** Introduced controlled randomness by regenerating **80% of the particles** each iteration, improving robustness against localization loss and aiding fast global convergence.  
-- **Gazebo Simulation:** Implemented and validated using a **TurtleBot** navigating through a custom indoor apartment environment.  
+- Reliable localization with only **100 particles**, compared to typical **500–3000 AMCL** particles.  
+- **80% randomized resampling** per iteration for fast recovery from localization loss.  
+- **Gazebo simulation** using a TurtleBot in an apartment environment.  
 
 ---
 
-### Frameworks & Libraries
-- ROS Noetic
-- Nav2
-- C++  
-- Gazebo  
-- RViz  
-- Eigen  
-- Docker  
+### Frameworks & Libraries  
+![ROS Noetic](https://img.shields.io/badge/ROS-Noetic-blue?logo=ros)  
+![C++](https://img.shields.io/badge/C%2B%2B-17-blue?logo=c%2B%2B)  
+![Eigen](https://img.shields.io/badge/Eigen-Math%20Library-lightgrey)  
+![Gazebo](https://img.shields.io/badge/Gazebo-Simulation-blueviolet?logo=ros)  
+![RViz](https://img.shields.io/badge/RViz-Visualization-orange?logo=ros)  
+![Docker](https://img.shields.io/badge/Docker-Containerization-blue?logo=docker)  
 
 ---
 
@@ -144,7 +141,7 @@ Robust and efficient Monte Carlo Localization achieving high accuracy with minim
 
 ---
 
-## **4. Design of a cascaded position and velocity controller for a pan-tilt camera tracking UAVs (Bachelor Thesis)**
+## **4. Design of a Cascaded Position and Velocity Controller for a Pan–Tilt Camera Tracking UAVs (Bachelor Thesis)**
 
 <center>
 <video width="70%" controls autoplay loop muted>
@@ -156,39 +153,28 @@ Robust and efficient Monte Carlo Localization achieving high accuracy with minim
 ---
 
 ### Description
-This project presents a **control system for tracking UAVs at high speeds and short distances** using a **pan–tilt (PT) camera**.  
-Developed at the **Automation and Control Institute (TU Wien)**, the system addresses safety-critical scenarios by accurately tracking drone motion in real time.
-
-The setup employs a **cascaded position and velocity controller** for the pan and tilt axes, each driven by a **Permanent Magnet Synchronous Motor (PMSM)** under **Field-Oriented Control (FOC)**.  
-A **Kalman Filter–based sensor fusion** module smooths and predicts drone trajectories, ensuring continuous tracking even during temporary loss of visual contact.
-
-The full system was modeled and simulated in **Matlab/Simulink**, **OpenCV** and **ROS**, with experiments using a **laser trajectory** as a reproducible target to validate controller performance.
+A **control system for tracking UAVs** using a **pan–tilt camera** with cascaded position and velocity control.  
+Developed at **Automation and Control Institute (TU Wien)**, the system enables accurate drone tracking in real time with predictive correction via **Kalman filtering**.
 
 ---
 
-### Key Highlights
-- Achieved **1 rad/s** rotational speed, enabling tracking of drones up to **30 m distance** at **30 m/s** velocity.  
-- Implemented **cascaded position–velocity control** for precise motor actuation.  
-- Used **Kalman filtering** to interpolate missing detections and maintain smooth motion estimation.  
-
----
-
-### Frameworks & Libraries
-- ROS (Robot Operating System)  
-- OpenCV  
-- C++  
-- Python  
-- Matlab/Simulink
-- OpenCV Kalman Filter (Sensor Fusion)  
+### Frameworks & Libraries  
+![ROS](https://img.shields.io/badge/ROS-Control-blue?logo=ros)  
+![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green?logo=opencv)  
+![C++](https://img.shields.io/badge/C%2B%2B-17-blue?logo=c%2B%2B)  
+![Python](https://img.shields.io/badge/Python-3.10-yellow?logo=python)  
+![Matlab](https://img.shields.io/badge/Matlab%2FSimulink-Control-orange?logo=mathworks)  
 
 ---
 
 ### Summary
 Developed a cascaded position–velocity control system with real-time sensor fusion for UAV tracking using a pan–tilt camera — achieving high-speed precision control and robust prediction even under visual occlusions.
 
+---
+
 # Personal Projects
 
-## **1. 6-DOF Robotic Arm – Design, Simulation, and Control**
+## **1. 6-DOF Robotic Arm – Design, Simulation & Control**
 
 <center>
 <video width="70%" controls autoplay loop muted>
@@ -204,33 +190,14 @@ Developed a cascaded position–velocity control system with real-time sensor fu
 
 ---
 
-### Description
-A fully designed and built **6-DOF robotic arm**, actuated by **stepper motors** and mechanical components such as **3D-printed harmonic drives** and **timing belts**.  
-
-The robot is controlled using the **Robot Operating System (ROS)** with the **MoveIt** motion planning framework.  
-MoveIt provides both **motion planning** and **collision avoidance**, ensuring that the arm operates safely in simulation and the physical world.
-
-The project demonstrates the full workflow from **mechanical design**, **simulation**, and **ROS integration** to **hardware control**.  
-Through **RViz visualization**, planned trajectories are simulated before execution, and these are then transferred seamlessly to the real robot arm.
-
----
-
-### Key Highlights
-- **Custom-built 6-DOF robotic arm** driven by stepper motors  
-- **3D-printed harmonic drives** and timing belt mechanisms for high precision  
-- **MoveIt + RViz** integration for planning, visualization, and collision avoidance  
-- **ROS-based control pipeline** for synchronized real-world execution  
-- Modular architecture designed for future **vision-based pick-and-place** integration  
-
----
-
-### Frameworks & Tools
-- ROS  
-- MoveIt  
-- RViz  
-- Python / C++  
-- 3D Printing (Fusion 360 / PLA)  
-- Stepper Motor Control (DRV8825 Drivers)  
+### Frameworks & Tools  
+![ROS](https://img.shields.io/badge/ROS-Integration-blue?logo=ros)  
+![MoveIt](https://img.shields.io/badge/MoveIt-Motion%20Planning-purple?logo=ros)  
+![RViz](https://img.shields.io/badge/RViz-Visualization-orange?logo=ros)  
+![Python](https://img.shields.io/badge/Python-3.10-yellow?logo=python)  
+![C++](https://img.shields.io/badge/C%2B%2B-17-blue?logo=c%2B%2B)  
+![SolidWorks](https://img.shields.io/badge/SolidWorks-Mechanical%20Design-red)  
+![3D Printing](https://img.shields.io/badge/3D%20Printing-Prototyping-darkgreen)
 
 ---
 
