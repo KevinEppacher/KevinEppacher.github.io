@@ -37,9 +37,9 @@ A hybrid semantic exploration framework for **multi-object search with persisten
 
 <div align="center" style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
   <figure style="margin:0;">
-    <img src="./img/memory.png" width="450" style="border-radius:8px;">
+    <img src="./img/somewhere_to_sleep.png" width="450" style="border-radius:8px;">
     <figcaption style="font-size:0.9em; color:gray; margin-top:5px;">
-      Persistent 3D semantic memory representation for text prompt "somewhere  to sleep"
+      Persistent zero-shot 3D semantic memory representation for text prompt "somewhere to sleep"
     </figcaption>
   </figure>
 
