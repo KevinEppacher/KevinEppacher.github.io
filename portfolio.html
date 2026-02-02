@@ -101,18 +101,18 @@ and is wrapped around the whole page content, except for the footer in this exam
 <h2><strong>1. SAGE – Semantic-Aware Guided Exploration with Persistent Memory (Master Thesis)</strong></h2>
 <p>A hybrid semantic exploration framework for <strong>multi-object search with persistent memory</strong>, integrating <strong>vision-language models</strong>, <strong>semantic mapping</strong>, and <strong>frontier-based navigation</strong> for intelligent exploration and reasoning.</p>
 <center>
-  <video id="searchVideo" width="70%" controls autoplay loop muted>
-    <source src="./videos/search_fridge.mp4" type="video/mp4">
+  <video id="searchVideo_multi" width="70%" controls autoplay loop muted>
+    <source src="./videos/SAGE/2026-02-02_14-45_SAGE_Sim.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
   <figcaption style="font-size:0.9em; color:gray; margin-top:6px;">
-    Robot searching for text prompt: <em>"fridge"</em>
+    Multi-object semantic search in simulation for the targets <em>bed</em>, <em>oven</em>, and <em>TV monitor</em>.
   </figcaption>
 
   <script>
-    const v = document.getElementById('searchVideo');
-    v.playbackRate = 10.0;  // plays 10× faster
+    const v = document.getElementById('searchVideo_multi');
+    v.playbackRate = 1.0;  // normal speed
   </script>
 
 </center>
@@ -121,7 +121,7 @@ and is wrapped around the whole page content, except for the footer in this exam
   <figure style="margin:0;">
     <img src="./img/somewhere_to_sleep.png" width="450" style="border-radius:8px;">
     <figcaption style="font-size:0.9em; color:gray; margin-top:5px;">
-      Persistent 3D semantic memory representation for text prompt "somewhere  to sleep"
+      Persistent zero-shot 3D semantic memory representation for text prompt "somewhere to sleep"
     </figcaption>
   </figure>
 
@@ -147,6 +147,23 @@ It combines <strong>exploration</strong>, <strong>semantic understanding</strong
 <li><strong>YOLO-E</strong> for real-time object detection and <strong>BLIP-2</strong> for multimodal grounding, fused with <strong>OpenFusion’s semantic map</strong> for robust and context-aware detection.</li>
 <li>The combination of <strong>VLM-based reasoning</strong> and <strong>semantic memory</strong> allows the system to continuously refine its understanding of the environment and improve future searches.</li>
 </ul>
+<center>
+  <video id="searchVideo_fridge" width="70%" controls autoplay loop muted>
+    <source src="./videos/SAGE/search_fridge.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <figcaption style="font-size:0.9em; color:gray; margin-top:6px;">
+    Robot searching for text prompt: <em>"fridge"</em>
+  </figcaption>
+
+  <script>
+    const v = document.getElementById('searchVideo_fridge');
+    v.playbackRate = 10.0;  // plays 10× faster
+  </script>
+
+</center>
+
 <p><strong>Evaluation:</strong><br />
 To validate SAGE, 3D semantic segmentation with OpenFusion is used to compare object detection and mapping accuracy against the same semantic classes.<br />
 Performance is measured using <strong>Success Rate (SR)</strong> and <strong>Success weighted by Path Length (SPL)</strong> metrics for single and multi-object search tasks.</p>
@@ -193,7 +210,7 @@ Performance is measured using <strong>Success Rate (SR)</strong> and <strong>Suc
 <ul>
 <li><a href="https://github.com/KevinEppacher/SAGE.git">GitHub Repository</a></li>
 </ul>
-<h2>https://github.com/KevinEppacher/SAGE.git</h2>
+<hr />
 <h3>Summary</h3>
 <p><strong>SAGE</strong> introduces a semantic exploration architecture that fuses <strong>frontier-based exploration</strong>, <strong>3D mapping</strong>, and <strong>vision-language models</strong> into a unified pipeline for <strong>open-vocabulary multi-object search</strong>.<br />
 Through <strong>persistent semantic memory</strong> and <strong>cross-modal fusion</strong>, it enables robots to recall, reason, and plan toward objects intelligently during long-term autonomous missions.</p>

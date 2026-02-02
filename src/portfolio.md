@@ -19,18 +19,18 @@ A curated selection of my robotics research and engineering work, focused on rea
 A hybrid semantic exploration framework for **multi-object search with persistent memory**, integrating **vision-language models**, **semantic mapping**, and **frontier-based navigation** for intelligent exploration and reasoning.
 
 <center>
-  <video id="searchVideo" width="70%" controls autoplay loop muted>
-    <source src="./videos/search_fridge.mp4" type="video/mp4">
+  <video id="searchVideo_multi" width="70%" controls autoplay loop muted>
+    <source src="./videos/SAGE/2026-02-02_14-45_SAGE_Sim.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
   <figcaption style="font-size:0.9em; color:gray; margin-top:6px;">
-    Robot searching for text prompt: <em>"fridge"</em>
+    Multi-object semantic search in simulation for the targets <em>bed</em>, <em>oven</em>, and <em>TV monitor</em>.
   </figcaption>
 
   <script>
-    const v = document.getElementById('searchVideo');
-    v.playbackRate = 10.0;  // plays 10× faster
+    const v = document.getElementById('searchVideo_multi');
+    v.playbackRate = 1.0;  // normal speed
   </script>
 </center>
 
@@ -65,6 +65,22 @@ The system integrates multiple AI and robotics components:
 - **Frontier-based exploration** for geometric expansion of the map, enhanced by a **Vision-Language Model (VLM)** scoring system to evaluate which frontiers are most likely to contain queried objects.  
 - **YOLO-E** for real-time object detection and **BLIP-2** for multimodal grounding, fused with **OpenFusion’s semantic map** for robust and context-aware detection.  
 - The combination of **VLM-based reasoning** and **semantic memory** allows the system to continuously refine its understanding of the environment and improve future searches.
+
+<center>
+  <video id="searchVideo_fridge" width="70%" controls autoplay loop muted>
+    <source src="./videos/SAGE/search_fridge.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <figcaption style="font-size:0.9em; color:gray; margin-top:6px;">
+    Robot searching for text prompt: <em>"fridge"</em>
+  </figcaption>
+
+  <script>
+    const v = document.getElementById('searchVideo_fridge');
+    v.playbackRate = 10.0;  // plays 10× faster
+  </script>
+</center>
 
 **Evaluation:**  
 To validate SAGE, 3D semantic segmentation with OpenFusion is used to compare object detection and mapping accuracy against the same semantic classes.  
@@ -114,7 +130,6 @@ The project is currently under **active development**, with further experiments 
 ### Links  
 - [GitHub Repository](https://github.com/KevinEppacher/SAGE.git)
 
-https://github.com/KevinEppacher/SAGE.git
 ---
 
 ### Summary  
