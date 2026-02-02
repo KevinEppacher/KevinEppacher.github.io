@@ -27,11 +27,6 @@ A hybrid semantic exploration framework for **multi-object search with persisten
   <figcaption style="font-size:0.9em; color:gray; margin-top:6px;">
     Multi-object semantic search in simulation for the targets <em>bed</em>, <em>oven</em>, and <em>TV monitor</em>.
   </figcaption>
-
-  <script>
-    const v = document.getElementById('searchVideo_multi');
-    v.playbackRate = 1.0;  // normal speed
-  </script>
 </center>
 
 
