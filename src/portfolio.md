@@ -62,7 +62,7 @@ The system integrates multiple AI and robotics components:
 - The combination of **VLM-based reasoning** and **semantic memory** allows the system to continuously refine its understanding of the environment and improve future searches.
 
 <center>
-  <video id="searchVideo_fridge" width="70%" controls autoplay loop muted>
+  <video id="searchVideo" width="70%" controls autoplay loop muted>
     <source src="./videos/SAGE/search_fridge.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
@@ -72,7 +72,7 @@ The system integrates multiple AI and robotics components:
   </figcaption>
 
   <script>
-    const v = document.getElementById('searchVideo_fridge');
+    const v = document.getElementById('searchVideo');
     v.playbackRate = 10.0;  // plays 10× faster
   </script>
 </center>
