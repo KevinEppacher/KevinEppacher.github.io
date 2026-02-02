@@ -105,12 +105,10 @@ and is wrapped around the whole page content, except for the footer in this exam
     <source src="./videos/SAGE/2026-02-02_14-45_SAGE_Sim.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
-
   <figcaption style="font-size:0.9em; color:gray; margin-top:6px;">
     Multi-object semantic search in simulation for the targets <em>bed</em>, <em>oven</em>, and <em>TV monitor</em>.
   </figcaption>
 </center>
-
 <div align="center" style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
   <figure style="margin:0;">
     <img src="./img/somewhere_to_sleep.png" width="450" style="border-radius:8px;">
@@ -118,7 +116,6 @@ and is wrapped around the whole page content, except for the footer in this exam
       Persistent zero-shot 3D semantic memory representation for text prompt "somewhere to sleep"
     </figcaption>
   </figure>
-
   <figure style="margin:0;">
     <img src="./img/isaac_sim_demo.png" width="450" style="border-radius:8px;">
     <figcaption style="font-size:0.9em; color:gray; margin-top:5px;">
@@ -126,11 +123,9 @@ and is wrapped around the whole page content, except for the footer in this exam
     </figcaption>
   </figure>
 </div>
-
 <hr />
 <details>
 <summary>📘 Read full description</summary>
-
 <h3>Description</h3>
 <p><strong>SAGE (Semantic-Aware Guided Exploration)</strong> is a framework designed for <strong>multi-object search</strong> in unknown environments using <strong>persistent 3D semantic memory</strong>.<br />
 It combines <strong>exploration</strong>, <strong>semantic understanding</strong>, and <strong>memory-based reasoning</strong> to enable robots to search and identify objects efficiently using open-vocabulary prompts.</p>
@@ -146,18 +141,14 @@ It combines <strong>exploration</strong>, <strong>semantic understanding</strong
     <source src="./videos/SAGE/search_fridge.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
-
   <figcaption style="font-size:0.9em; color:gray; margin-top:6px;">
     Robot searching for text prompt: <em>"fridge"</em>
   </figcaption>
-
   <script>
     const v = document.getElementById('searchVideo_fridge');
     v.playbackRate = 10.0;  // plays 10× faster
   </script>
-
 </center>
-
 <p><strong>Evaluation:</strong><br />
 To validate SAGE, 3D semantic segmentation with OpenFusion is used to compare object detection and mapping accuracy against the same semantic classes.<br />
 Performance is measured using <strong>Success Rate (SR)</strong> and <strong>Success weighted by Path Length (SPL)</strong> metrics for single and multi-object search tasks.</p>
@@ -166,19 +157,15 @@ Performance is measured using <strong>Success Rate (SR)</strong> and <strong>Suc
     <source src="./videos/evaluation_pcl.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
-
   <figcaption style="font-size:0.9em; color:gray; margin-top:6px; max-width:70%;">
     Dynamic semantic evaluation map filtering for <em>chair</em>, <em>TV</em>, <em>sofa</em>, and <em>fridge</em>,
     continuously calculating the shortest path to the nearest object.
   </figcaption>
-
   <script>
     const v = document.getElementById('evalVideo');
     v.playbackRate = 3.0;  // plays at 3× speed
   </script>
-
 </center>
-
 <h3>Key Features</h3>
 <ul>
 <li>Designed a full multi-modal semantic mapping pipeline combining depth, RGB, VLM reasoning, and 3D fusion.</li>
@@ -209,7 +196,6 @@ Performance is measured using <strong>Success Rate (SR)</strong> and <strong>Suc
 <p><strong>SAGE</strong> introduces a semantic exploration architecture that fuses <strong>frontier-based exploration</strong>, <strong>3D mapping</strong>, and <strong>vision-language models</strong> into a unified pipeline for <strong>open-vocabulary multi-object search</strong>.<br />
 Through <strong>persistent semantic memory</strong> and <strong>cross-modal fusion</strong>, it enables robots to recall, reason, and plan toward objects intelligently during long-term autonomous missions.</p>
 </details>
-
 <hr />
 <p><a id="rl-framework"></a></p>
 <h2><strong>2. ROS 2 Reinforcement Learning Framework</strong></h2>
@@ -217,11 +203,9 @@ Through <strong>persistent semantic memory</strong> and <strong>cross-modal fusi
 <center>
 <img src="./videos/car_racing_demo.gif" width="70%">
 </center>
-
 <hr />
 <details>
 <summary>📘 Read full description</summary>
-
 <h3>Description</h3>
 <p>A modular <strong>ROS 2 Deep Reinforcement Learning (DRL) framework</strong> developed as a <strong>commissioned project</strong> to provide a standardized, extensible platform for end-to-end learning in robotics.<br />
 The goal was to <strong>lower the entry barrier for students and research teams</strong> by enabling quick prototyping, reproducible training, and real-time introspection within ROS 2.</p>
@@ -231,7 +215,6 @@ It comes with practical examples (CarRacing, LunarLander, CartPole) and extensiv
 <center>
 <img src="./img/vec_env_car_racing_training.png" width="70%" style="margin:10px;">
 </center>
-
 <p>The framework emphasizes <strong>reproducibility, scalability, and transparency</strong>, making it an ideal foundation for both industrial and educational reinforcement-learning applications.</p>
 <hr />
 <h3>Key Features</h3>
@@ -265,7 +248,6 @@ It comes with practical examples (CarRacing, LunarLander, CartPole) and extensiv
 <p>A professionally developed <strong>ROS 2 reinforcement learning framework</strong> unifying algorithm design, training, and evaluation in robotics.<br />
 It bridges <strong>educational usability</strong> and <strong>research-grade scalability</strong>, empowering students, researchers, and engineers to prototype and deploy intelligent robotic behaviors efficiently.</p>
 </details>
-
 <hr />
 <p><a id="nmpc-casadi"></a></p>
 <h2><strong>3. Nonlinear Model Predictive Controller (nMPC) for Differential Drive Mobile Robot</strong></h2>
@@ -276,11 +258,9 @@ It bridges <strong>educational usability</strong> and <strong>research-grade sca
   Your browser does not support the video tag.
 </video>
 </center>
-
 <hr />
 <details>
 <summary>📘 Read full description</summary>
-
 <h3>Description</h3>
 <p>A <strong>nonlinear Model Predictive Controller (nMPC)</strong> based local planner developed for a <strong>Differential Drive Mobile Robot (DDMR)</strong>.</p>
 <p>Unlike conventional reactive planners, the nMPC predicts future robot states through a <strong>kinematic model</strong> and optimizes control inputs over a finite horizon.<br />
@@ -320,7 +300,6 @@ The entire system was simulated in <strong>Gazebo</strong> using a <strong>Turtl
 <h3>Summary</h3>
 <p>A high-performance nonlinear MPC for mobile robots using CasADi and IPOPT delivering smooth constraint-aware motion planning and serving as a foundation for subsequent PyTorch-based re-implementations in ROS 2.</p>
 </details>
-
 <hr />
 <p><a id="mpc-pytorch"></a></p>
 <h2><strong>4. Optimization Lab – PyTorch-Based MPC for Robotics</strong></h2>
@@ -328,11 +307,9 @@ The entire system was simulated in <strong>Gazebo</strong> using a <strong>Turtl
 <center>
 <img src="./videos/mpc_demo_1.gif" width="70%">
 </center>
-
 <hr />
 <details>
 <summary>📘 Read full description</summary>
-
 <h3>Description</h3>
 <p>A <strong>PyTorch-based Model Predictive Control (MPC)</strong> framework developed as part of a <strong>university optimization lab</strong>, demonstrating how numerical optimization can be applied to control and planning problems in robotics.<br />
 Unlike the earlier CasADi-based MPC, this version leverages <strong>PyTorch autograd and optimizers (Adam/LBFGS)</strong> directly, without relying on external NLP solvers, to teach students how to <em>formulate and solve control problems from first principles</em>.</p>
@@ -373,7 +350,6 @@ It includes comprehensive documentation explaining:</p>
 <p>A <strong>university lab project</strong> showcasing optimization for robotics using <strong>PyTorch as a numerical solver</strong>.<br />
 It bridges classical control and differentiable programming by re-implementing nMPC entirely in PyTorch, illustrating how learning-based and optimization-based control can converge within modern ROS 2 pipelines.</p>
 </details>
-
 <hr />
 <p><a id="airskin"></a></p>
 <h2><strong>5. Automated Sensitivity Measurement System (AIRSKIN)</strong></h2>
@@ -384,11 +360,9 @@ It bridges classical control and differentiable programming by re-implementing n
   Your browser does not support the video tag.
 </video>
 </center>
-
 <hr />
 <details>
 <summary>📘 Read full description</summary>
-
 <h3>Description</h3>
 <p>A <strong>collaborative project with <a href="https://www.airskin.io/">Blue Danube Robotics – AIRSKIN</a></strong> developed at <strong>UAS Technikum Vienna</strong> to automate tactile pad sensitivity measurements.</p>
 <p>The system measures the <strong>force and displacement</strong> required to trigger an AIRSKIN pad at defined grid points. From this, the <strong>spring constant</strong> and <strong>local sensitivity</strong> are derived to detect mechanical weak points and support further product development.</p>
@@ -417,7 +391,6 @@ It bridges classical control and differentiable programming by re-implementing n
 <h3>Summary</h3>
 <p>Automated robotic test bench for AIRSKIN pad calibration, measuring and visualizing tactile sensitivity through force–displacement mapping.</p>
 </details>
-
 <hr />
 <p><a id="mcl"></a></p>
 <h2><strong>6. Monte Carlo Localization (Particle Filter) for Mobile Robots</strong></h2>
@@ -425,11 +398,9 @@ It bridges classical control and differentiable programming by re-implementing n
 <center>
 <img src="./videos/mcl.gif" width="70%" alt="Monte Carlo Localization simulation in Gazebo">
 </center>
-
 <hr />
 <details>
 <summary>📘 Read full description</summary>
-
 <h3>Description</h3>
 <p>A <strong>Monte Carlo Localization (MCL)</strong> system, also known as a <strong>Particle Filter</strong>, implemented in <strong>C++</strong> for <strong>Differential Drive Mobile Robots</strong> using <strong>ROS Noetic</strong>.</p>
 <p>The algorithm estimates a robot’s pose on a known map by maintaining a set of weighted samples (“particles”), each representing a possible state hypothesis.</p>
@@ -458,7 +429,6 @@ It bridges classical control and differentiable programming by re-implementing n
 <h3>Summary</h3>
 <p>Robust and efficient Monte Carlo Localization achieving high accuracy with minimal particles through adaptive resampling, enabling fast and reliable robot pose estimation in dynamic indoor environments.</p>
 </details>
-
 <hr />
 <p><a id="pt-uav"></a></p>
 <h2><strong>7. Design of a Cascaded Position and Velocity Controller for a Pan–Tilt Camera Tracking UAVs (Bachelor Thesis)</strong></h2>
@@ -469,11 +439,9 @@ It bridges classical control and differentiable programming by re-implementing n
   Your browser does not support the video tag.
 </video>
 </center>
-
 <hr />
 <details>
 <summary>📘 Read full description</summary>
-
 <h3>Description</h3>
 <p>A <strong>control system for tracking UAVs</strong> using a <strong>pan–tilt camera</strong> with cascaded position and velocity control.<br />
 Developed at <strong>Automation and Control Institute (TU Wien)</strong>, the system enables accurate drone tracking in real time with predictive correction via <strong>Kalman filtering</strong>.</p>
@@ -488,7 +456,6 @@ Developed at <strong>Automation and Control Institute (TU Wien)</strong>, the sy
 <h3>Summary</h3>
 <p>Designed a cascaded position–velocity control system for a high-speed pan–tilt camera tracking UAVs, integrating FOC-driven PMSM motors and Kalman-filtered trajectory prediction for robust real-time tracking.</p>
 </details>
-
 <hr />
 <p><a id="personal-projects"></a></p>
 <h1>Personal Projects</h1>
@@ -503,16 +470,13 @@ These projects allow me to prototype, test, and iterate on new ideas that blend 
   Your browser does not support the video tag.
 </video>
 </center>
-
 <center>
 <img src="./img/6_DOFRA_Rendered_1.png" width="45%" style="margin:10px;">
 <img src="./img/6_DOFRA_Rendered_2.png" width="45%" style="margin:10px;">
 </center>
-
 <hr />
 <details>
 <summary>📘 Read full description</summary>
-
 <h3>Frameworks &amp; Tools</h3>
 <p><img src="https://img.shields.io/badge/ROS-Integration-blue?logo=ros" alt="ROS" /><br />
 <img src="https://img.shields.io/badge/MoveIt-Motion%20Planning-purple?logo=ros" alt="MoveIt" /><br />
@@ -525,7 +489,6 @@ These projects allow me to prototype, test, and iterate on new ideas that blend 
 <h3>Summary</h3>
 <p>A 6-DOF robotic arm designed and controlled entirely through open-source tools, combining 3D-printed mechanics, ROS MoveIt motion planning, and real-to-sim synchronization for flexible robotic manipulation.</p>
 </details>
-
 <!-- END GENERATED HTML HERE -->
 
   </div>
