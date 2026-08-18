@@ -1,10 +1,14 @@
 # About Me
 
-Hi there! 👋 I’m **Kevin Eppacher**, a robotic software engineer passionate about perception-driven autonomy, intelligent control, and semantic understanding in robotics. 🤖  
+Hi there! 👋 I’m **Kevin Eppacher**, a Robotics Software Engineer specializing in **autonomous mobile robot navigation, motion planning, control, and ROS 2 system architecture**. 🤖
 
-I earned my **B.Sc. in Mechatronics & Robotics** and I’m currently pursuing my **M.Sc. in Robotics** at [UAS Technikum Vienna](https://www.technikum-wien.at/), where I focus on computer vision, probabilistic robotics, and nonlinear optimization. Over the past years, I’ve worked both in **research and industry**, building intelligent robotic systems that connect perception, planning, and action through modern AI frameworks.
+I hold an **M.Sc. in Robotics** and a **B.Sc. in Mechatronics & Robotics** from [UAS Technikum Vienna](https://www.technikum-wien.at/), with a focus on probabilistic robotics, nonlinear optimization, computer vision, and autonomous systems.
 
-I previously worked as an **Industrial Robotics Software Engineer** at [Blue Danube Robotics (AIRSKIN)](https://www.airskin.io/), where I developed robotic applications for safety, palletizing, and automated testing. My current research project, **SAGE – Semantic-Aware Guided Exploration**, explores how **Visual-Language Models (VLMs)** can drive autonomous exploration through 3D semantic mapping and persistent memory.
+My professional work spans **autonomous mobile robots and industrial robotics**, with hands-on experience in C++, Python, ROS 2, navigation, manipulation, simulation, automated testing, and physical robot integration. At [Baubot](https://www.baubot.at/), I was responsible for building a ROS 2 software stack from scratch, developing C++ APIs for navigation and motion planning, automated simulation-based integration testing, and deploying the stack on industrial PC hardware.
+
+Previously, I worked as an **Industrial Robotics Software Engineer** at [Blue Danube Robotics (AIRSKIN)](https://www.airskin.io/), developing software for industrial robot applications involving motion planning, manipulation, automated testing, and sensor-based robotic systems.
+
+My Master’s thesis, **SAGE: Semantic-Aware Guided Exploration with Persistent Memory**, explores autonomous robot exploration by combining navigation, 3D semantic mapping, visual-language models (VLMs), and persistent spatial memory.
 
 ---
 

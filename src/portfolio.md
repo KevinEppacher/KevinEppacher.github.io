@@ -3,18 +3,18 @@
 A curated selection of my robotics research and engineering work, focused on real-time control, 3D perception, optimization, and applied AI-driven autonomy.
 
 # Table of Contents
-- [1. SAGE – Semantic-Aware Guided Exploration](#sage)
+- [1. SAGE: Semantic-Aware Guided Exploration](#sage)
 - [2. ROS 2 Reinforcement Learning Framework](#rl-framework)
 - [3. Nonlinear MPC (CasADi/IPOPT)](#nmpc-casadi)
 - [4. PyTorch-Based MPC](#mpc-pytorch)
 - [5. AIRSKIN Sensitivity Measurement System](#airskin)
 - [6. Monte Carlo Localization](#mcl)
-- [7. Pan–Tilt UAV Tracking](#pt-uav)
+- [7. Pan-Tilt UAV Tracking](#pt-uav)
 - [8. Personal Projects](#personal-projects)
 
 <a id="sage"></a>
 
-## **1. SAGE – Semantic-Aware Guided Exploration with Persistent Memory (Master Thesis)**
+## **1. SAGE: Semantic-Aware Guided Exploration with Persistent Memory (Master Thesis)**
 
 A hybrid semantic exploration framework for **multi-object search with persistent memory**, integrating **vision-language models**, **semantic mapping**, and **frontier-based navigation** for intelligent exploration and reasoning.
 
@@ -240,7 +240,7 @@ The planner was benchmarked against standard local planners:
 Results demonstrate smoother, dynamically feasible trajectories, particularly in cluttered or narrow environments.  
 The entire system was simulated in **Gazebo** using a **TurtleBot**, with a GPU-enabled **Docker** container for reproducibility.
 
-> *See also the [Optimization Lab – PyTorch-based MPC (ROS 2)](#3-optimization-lab-pytorch-based-mpc-for-robotics) for a lightweight educational re-implementation using PyTorch instead of CasADi.*
+> *See also the [Optimization Lab: PyTorch-based MPC (ROS 2)](#3-optimization-lab-pytorch-based-mpc-for-robotics) for a lightweight educational re-implementation using PyTorch instead of CasADi.*
 
 ---
 
@@ -270,7 +270,7 @@ A high-performance nonlinear MPC for mobile robots using CasADi and IPOPT delive
 
 <a id="mpc-pytorch"></a>
 
-## **4. Optimization Lab – PyTorch-Based MPC for Robotics**
+## **4. Optimization Lab: PyTorch-Based MPC for Robotics**
 
 An educational ROS 2 lab demonstrating real-time control through gradient-based optimization with PyTorch, teaching how to implement MPC without external solvers.
 
@@ -334,7 +334,7 @@ It bridges classical control and differentiable programming by re-implementing n
 
 ## **5. Automated Sensitivity Measurement System (AIRSKIN)**
 
-Designed and implemented an automated force–displacement measurement system using a UR10 robot, FT sensor, and RGB-D visualization, enabling reproducible AIRSKIN pad calibration.
+Designed and implemented an automated force-displacement measurement system using a UR10 robot, FT sensor, and RGB-D visualization, enabling reproducible AIRSKIN pad calibration.
 
 <center>
 <video width="70%" controls autoplay loop muted>
@@ -348,13 +348,13 @@ Designed and implemented an automated force–displacement measurement system us
 <summary>📘 Read full description</summary>
 
 ### Description
-A **collaborative project with [Blue Danube Robotics – AIRSKIN](https://www.airskin.io/)** developed at **UAS Technikum Vienna** to automate tactile pad sensitivity measurements.  
+A **collaborative project with [Blue Danube Robotics (AIRSKIN)](https://www.airskin.io/)** developed at **UAS Technikum Vienna** to automate tactile pad sensitivity measurements.  
 
 The system measures the **force and displacement** required to trigger an AIRSKIN pad at defined grid points. From this, the **spring constant** and **local sensitivity** are derived to detect mechanical weak points and support further product development.
 
 Built entirely with **ROS Noetic** and **Docker**, the system integrates:
 - A **UR10** industrial robot  
-- A **force–torque (FT) sensor** connected via the UR ROS bridge (TCP/IP)  
+- A **force-torque (FT) sensor** connected via the UR ROS bridge (TCP/IP)  
 - A **custom ImGui C++ HMI** for switching between *Freedrive Mode* and *External Control Mode*  
 
 Once all measurement points are defined, **MoveIt** executes a fully automated sequence. The system visualizes force vectors in **RViz** and overlays a 3D point cloud from an integrated RGB-D camera.
@@ -378,7 +378,7 @@ Once all measurement points are defined, **MoveIt** executes a fully automated s
 ---
 
 ### Summary
-Automated robotic test bench for AIRSKIN pad calibration, measuring and visualizing tactile sensitivity through force–displacement mapping.
+Automated robotic test bench for AIRSKIN pad calibration, measuring and visualizing tactile sensitivity through force-displacement mapping.
 
 </details>
 
@@ -406,7 +406,7 @@ The algorithm estimates a robot’s pose on a known map by maintaining a set of 
 ---
 
 ### Key Highlights
-- Reliable localization with only **100 particles**, compared to typical **500–3000 AMCL** particles.  
+- Reliable localization with only **100 particles**, compared to typical **500-3000 AMCL** particles.  
 - **80% randomized resampling** per iteration for fast recovery from localization loss.  
 - **Gazebo simulation** using a TurtleBot in an apartment environment.  
 
@@ -437,9 +437,9 @@ Robust and efficient Monte Carlo Localization achieving high accuracy with minim
 
 <a id="pt-uav"></a>
 
-## **7. Design of a Cascaded Position and Velocity Controller for a Pan–Tilt Camera Tracking UAVs (Bachelor Thesis)**
+## **7. Design of a Cascaded Position and Velocity Controller for a Pan-Tilt Camera Tracking UAVs (Bachelor Thesis)**
 
-A cascaded control system enabling real-time UAV tracking with a high-speed pan–tilt camera, combining field-oriented motor control and Kalman-filtered trajectory prediction.
+A cascaded control system enabling real-time UAV tracking with a high-speed pan-tilt camera, combining field-oriented motor control and Kalman-filtered trajectory prediction.
 
 <center>
 <video width="70%" controls autoplay loop muted>
@@ -453,7 +453,7 @@ A cascaded control system enabling real-time UAV tracking with a high-speed pan�
 <summary>📘 Read full description</summary>
 
 ### Description
-A **control system for tracking UAVs** using a **pan–tilt camera** with cascaded position and velocity control.  
+A **control system for tracking UAVs** using a **pan-tilt camera** with cascaded position and velocity control.  
 Developed at **Automation and Control Institute (TU Wien)**, the system enables accurate drone tracking in real time with predictive correction via **Kalman filtering**.
 
 ---
@@ -468,7 +468,7 @@ Developed at **Automation and Control Institute (TU Wien)**, the system enables 
 ---
 
 ### Summary
-Designed a cascaded position–velocity control system for a high-speed pan–tilt camera tracking UAVs, integrating FOC-driven PMSM motors and Kalman-filtered trajectory prediction for robust real-time tracking.
+Designed a cascaded position-velocity control system for a high-speed pan-tilt camera tracking UAVs, integrating FOC-driven PMSM motors and Kalman-filtered trajectory prediction for robust real-time tracking.
 
 </details>
 
@@ -483,7 +483,7 @@ These projects allow me to prototype, test, and iterate on new ideas that blend 
 
 ---
 
-## **1. 6-DOF Robotic Arm – Design, Simulation & Control**
+## **1. 6-DOF Robotic Arm: Design, Simulation & Control**
 
 Designed and built a 6-DOF robotic arm using stepper-driven harmonic-drive-inspired gear reductions, integrated with ROS MoveIt for collision-aware motion planning and synchronized sim-to-real execution.
 
