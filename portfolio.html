@@ -88,17 +88,17 @@ and is wrapped around the whole page content, except for the footer in this exam
 <p>A curated selection of my robotics research and engineering work, focused on real-time control, 3D perception, optimization, and applied AI-driven autonomy.</p>
 <h1>Table of Contents</h1>
 <ul>
-<li><a href="#sage">1. SAGE – Semantic-Aware Guided Exploration</a></li>
+<li><a href="#sage">1. SAGE: Semantic-Aware Guided Exploration</a></li>
 <li><a href="#rl-framework">2. ROS 2 Reinforcement Learning Framework</a></li>
 <li><a href="#nmpc-casadi">3. Nonlinear MPC (CasADi/IPOPT)</a></li>
 <li><a href="#mpc-pytorch">4. PyTorch-Based MPC</a></li>
 <li><a href="#airskin">5. AIRSKIN Sensitivity Measurement System</a></li>
 <li><a href="#mcl">6. Monte Carlo Localization</a></li>
-<li><a href="#pt-uav">7. Pan–Tilt UAV Tracking</a></li>
+<li><a href="#pt-uav">7. Pan-Tilt UAV Tracking</a></li>
 <li><a href="#personal-projects">8. Personal Projects</a></li>
 </ul>
 <p><a id="sage"></a></p>
-<h2><strong>1. SAGE – Semantic-Aware Guided Exploration with Persistent Memory (Master Thesis)</strong></h2>
+<h2><strong>1. SAGE: Semantic-Aware Guided Exploration with Persistent Memory (Master Thesis)</strong></h2>
 <p>A hybrid semantic exploration framework for <strong>multi-object search with persistent memory</strong>, integrating <strong>vision-language models</strong>, <strong>semantic mapping</strong>, and <strong>frontier-based navigation</strong> for intelligent exploration and reasoning.</p>
 <center>
   <video id="searchVideo_multi" width="70%" controls autoplay loop muted>
@@ -279,7 +279,7 @@ The controller minimizes a cost function while enforcing <strong>hard constraint
 <p>Results demonstrate smoother, dynamically feasible trajectories, particularly in cluttered or narrow environments.<br />
 The entire system was simulated in <strong>Gazebo</strong> using a <strong>TurtleBot</strong>, with a GPU-enabled <strong>Docker</strong> container for reproducibility.</p>
 <blockquote>
-<p><em>See also the <a href="#3-optimization-lab-pytorch-based-mpc-for-robotics">Optimization Lab – PyTorch-based MPC (ROS 2)</a> for a lightweight educational re-implementation using PyTorch instead of CasADi.</em></p>
+<p><em>See also the <a href="#3-optimization-lab-pytorch-based-mpc-for-robotics">Optimization Lab: PyTorch-based MPC (ROS 2)</a> for a lightweight educational re-implementation using PyTorch instead of CasADi.</em></p>
 </blockquote>
 <hr />
 <h3>Frameworks &amp; Libraries</h3>
@@ -302,7 +302,7 @@ The entire system was simulated in <strong>Gazebo</strong> using a <strong>Turtl
 </details>
 <hr />
 <p><a id="mpc-pytorch"></a></p>
-<h2><strong>4. Optimization Lab – PyTorch-Based MPC for Robotics</strong></h2>
+<h2><strong>4. Optimization Lab: PyTorch-Based MPC for Robotics</strong></h2>
 <p>An educational ROS 2 lab demonstrating real-time control through gradient-based optimization with PyTorch, teaching how to implement MPC without external solvers.</p>
 <center>
 <img src="./videos/mpc_demo_1.gif" width="70%">
@@ -353,7 +353,7 @@ It bridges classical control and differentiable programming by re-implementing n
 <hr />
 <p><a id="airskin"></a></p>
 <h2><strong>5. Automated Sensitivity Measurement System (AIRSKIN)</strong></h2>
-<p>Designed and implemented an automated force–displacement measurement system using a UR10 robot, FT sensor, and RGB-D visualization, enabling reproducible AIRSKIN pad calibration.</p>
+<p>Designed and implemented an automated force-displacement measurement system using a UR10 robot, FT sensor, and RGB-D visualization, enabling reproducible AIRSKIN pad calibration.</p>
 <center>
 <video width="70%" controls autoplay loop muted>
   <source src="./videos/sensibility_measurements.mp4" type="video/mp4">
@@ -364,12 +364,12 @@ It bridges classical control and differentiable programming by re-implementing n
 <details>
 <summary>📘 Read full description</summary>
 <h3>Description</h3>
-<p>A <strong>collaborative project with <a href="https://www.airskin.io/">Blue Danube Robotics – AIRSKIN</a></strong> developed at <strong>UAS Technikum Vienna</strong> to automate tactile pad sensitivity measurements.</p>
+<p>A <strong>collaborative project with <a href="https://www.airskin.io/">Blue Danube Robotics (AIRSKIN)</a></strong> developed at <strong>UAS Technikum Vienna</strong> to automate tactile pad sensitivity measurements.</p>
 <p>The system measures the <strong>force and displacement</strong> required to trigger an AIRSKIN pad at defined grid points. From this, the <strong>spring constant</strong> and <strong>local sensitivity</strong> are derived to detect mechanical weak points and support further product development.</p>
 <p>Built entirely with <strong>ROS Noetic</strong> and <strong>Docker</strong>, the system integrates:</p>
 <ul>
 <li>A <strong>UR10</strong> industrial robot</li>
-<li>A <strong>force–torque (FT) sensor</strong> connected via the UR ROS bridge (TCP/IP)</li>
+<li>A <strong>force-torque (FT) sensor</strong> connected via the UR ROS bridge (TCP/IP)</li>
 <li>A <strong>custom ImGui C++ HMI</strong> for switching between <em>Freedrive Mode</em> and <em>External Control Mode</em></li>
 </ul>
 <p>Once all measurement points are defined, <strong>MoveIt</strong> executes a fully automated sequence. The system visualizes force vectors in <strong>RViz</strong> and overlays a 3D point cloud from an integrated RGB-D camera.</p>
@@ -389,7 +389,7 @@ It bridges classical control and differentiable programming by re-implementing n
 </ul>
 <hr />
 <h3>Summary</h3>
-<p>Automated robotic test bench for AIRSKIN pad calibration, measuring and visualizing tactile sensitivity through force–displacement mapping.</p>
+<p>Automated robotic test bench for AIRSKIN pad calibration, measuring and visualizing tactile sensitivity through force-displacement mapping.</p>
 </details>
 <hr />
 <p><a id="mcl"></a></p>
@@ -407,7 +407,7 @@ It bridges classical control and differentiable programming by re-implementing n
 <hr />
 <h3>Key Highlights</h3>
 <ul>
-<li>Reliable localization with only <strong>100 particles</strong>, compared to typical <strong>500–3000 AMCL</strong> particles.</li>
+<li>Reliable localization with only <strong>100 particles</strong>, compared to typical <strong>500-3000 AMCL</strong> particles.</li>
 <li><strong>80% randomized resampling</strong> per iteration for fast recovery from localization loss.</li>
 <li><strong>Gazebo simulation</strong> using a TurtleBot in an apartment environment.</li>
 </ul>
@@ -431,8 +431,8 @@ It bridges classical control and differentiable programming by re-implementing n
 </details>
 <hr />
 <p><a id="pt-uav"></a></p>
-<h2><strong>7. Design of a Cascaded Position and Velocity Controller for a Pan–Tilt Camera Tracking UAVs (Bachelor Thesis)</strong></h2>
-<p>A cascaded control system enabling real-time UAV tracking with a high-speed pan–tilt camera, combining field-oriented motor control and Kalman-filtered trajectory prediction.</p>
+<h2><strong>7. Design of a Cascaded Position and Velocity Controller for a Pan-Tilt Camera Tracking UAVs (Bachelor Thesis)</strong></h2>
+<p>A cascaded control system enabling real-time UAV tracking with a high-speed pan-tilt camera, combining field-oriented motor control and Kalman-filtered trajectory prediction.</p>
 <center>
 <video width="70%" controls autoplay loop muted>
   <source src="./videos/OptoFence_Video_3.mp4" type="video/mp4">
@@ -443,7 +443,7 @@ It bridges classical control and differentiable programming by re-implementing n
 <details>
 <summary>📘 Read full description</summary>
 <h3>Description</h3>
-<p>A <strong>control system for tracking UAVs</strong> using a <strong>pan–tilt camera</strong> with cascaded position and velocity control.<br />
+<p>A <strong>control system for tracking UAVs</strong> using a <strong>pan-tilt camera</strong> with cascaded position and velocity control.<br />
 Developed at <strong>Automation and Control Institute (TU Wien)</strong>, the system enables accurate drone tracking in real time with predictive correction via <strong>Kalman filtering</strong>.</p>
 <hr />
 <h3>Frameworks &amp; Libraries</h3>
@@ -454,7 +454,7 @@ Developed at <strong>Automation and Control Institute (TU Wien)</strong>, the sy
 <img src="https://img.shields.io/badge/Matlab%2FSimulink-Control-orange?logo=mathworks" alt="Matlab" /></p>
 <hr />
 <h3>Summary</h3>
-<p>Designed a cascaded position–velocity control system for a high-speed pan–tilt camera tracking UAVs, integrating FOC-driven PMSM motors and Kalman-filtered trajectory prediction for robust real-time tracking.</p>
+<p>Designed a cascaded position-velocity control system for a high-speed pan-tilt camera tracking UAVs, integrating FOC-driven PMSM motors and Kalman-filtered trajectory prediction for robust real-time tracking.</p>
 </details>
 <hr />
 <p><a id="personal-projects"></a></p>
@@ -462,7 +462,7 @@ Developed at <strong>Automation and Control Institute (TU Wien)</strong>, the sy
 <p>Outside of my academic research and industrial work, I enjoy building and experimenting with robotic systems in my free time, exploring mechanical design, embedded control, and intelligent motion planning.<br />
 These projects allow me to prototype, test, and iterate on new ideas that blend classical robotics with modern AI-driven methods.</p>
 <hr />
-<h2><strong>1. 6-DOF Robotic Arm – Design, Simulation &amp; Control</strong></h2>
+<h2><strong>1. 6-DOF Robotic Arm: Design, Simulation &amp; Control</strong></h2>
 <p>Designed and built a 6-DOF robotic arm using stepper-driven harmonic-drive-inspired gear reductions, integrated with ROS MoveIt for collision-aware motion planning and synchronized sim-to-real execution.</p>
 <center>
 <video width="70%" controls autoplay loop muted>
