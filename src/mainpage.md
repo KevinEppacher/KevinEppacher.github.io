@@ -2,11 +2,13 @@
 
 Hi there! 👋 I’m **Kevin Eppacher**, a Robotics Software Engineer specializing in **autonomous mobile robot navigation, motion planning, control, and ROS 2 system architecture**. 🤖
 
-I hold an **M.Sc. in Robotics** and a **B.Sc. in Mechatronics & Robotics** from [UAS Technikum Vienna](https://www.technikum-wien.at/), with a focus on probabilistic robotics, nonlinear optimization, computer vision, and autonomous systems.
+I hold an **M.Sc. in Robotics** and a **B.Sc. in Mechatronics & Robotics** from **[UAS Technikum Vienna](https://www.technikum-wien.at/)**, with a focus on probabilistic robotics, nonlinear optimization, computer vision, and autonomous systems.
 
-My professional work spans **autonomous mobile robots and industrial robotics**, with hands-on experience in C++, Python, ROS 2, navigation, manipulation, simulation, automated testing, and physical robot integration. At [Baubot](https://www.baubot.at/), I was responsible for building a ROS 2 software stack from scratch, developing C++ APIs for navigation and motion planning, automated simulation-based integration testing, and deploying the stack on industrial PC hardware.
+My professional work spans **autonomous mobile robots and industrial robotics**, with hands-on experience in **C++**, **Python**, **ROS 2**, **navigation**, **manipulation**, **simulation**, **automated testing**, and **physical robot integration**.
 
-Previously, I worked as an **Industrial Robotics Software Engineer** at [Blue Danube Robotics (AIRSKIN)](https://www.airskin.io/), developing software for industrial robot applications involving motion planning, manipulation, automated testing, and sensor-based robotic systems.
+At **[Baubot](https://www.baubot.com/)**, I was responsible for building a **ROS 2** software stack from scratch, developing **C++** APIs for navigation and motion planning, automated simulation-based integration testing, and deploying the stack on industrial PC hardware, for robotic applications in construction and industrial environments.
+
+At **[Blue Danube Robotics (AIRSKIN)](https://www.airskin.io/)**, I worked as an **Industrial Robotics Software Engineer**, focusing on collaborative robot programming and safety-critical systems, developing software for industrial robot applications involving motion planning, manipulation, automated testing, and sensor-based robotic systems.
 
 My Master’s thesis, **SAGE: Semantic-Aware Guided Exploration with Persistent Memory**, explores autonomous robot exploration by combining navigation, 3D semantic mapping, visual-language models (VLMs), and persistent spatial memory.
 
